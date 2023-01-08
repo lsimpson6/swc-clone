@@ -1,0 +1,167 @@
+﻿#welcome {
+    background-image: url(https://i.imgur.com/gDGwHcJ.png);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    position: relative;
+}
+
+#background-overlay-welcome {
+    background-color: rgba(0,0,0,.3);
+    height: 60vh;
+    position:absolute;
+    padding:0px;
+}
+
+.bg-Highlight-navy {
+    z-index: 1;
+    position: absolute;
+    border-radius: 5px;
+    width: 40%;
+    height: 125px;
+    background-color: #8F6152;
+    transform: translate(-0%, 10%);
+    animation: bgHighlight 2.5s ease-out 1;
+}
+
+.bg-Highlight-red {
+    z-index: 1;
+    position: absolute;
+    border-radius: 5px;
+    border-top-right-radius: 50% 50%;
+    border-bottom-right-radius: 50% 50%;
+    width: 40%;
+    height: 125px;
+    background-color: #8F6152;
+    transform: translate(-0%, 10%);
+    animation: bgHighlight 2s ease-in-out 1;
+}
+
+@keyframes bgHighlight {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .bg-Highlight-navy {
+        width: 100%;
+        height: 80px;
+    }
+
+    @keyframes bgHighlight {
+        from {
+            width: 0%;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+}
+
+.location-check, .nohover:hover {
+    z-index: 1000;
+    position: fixed;
+    left: 2.5%;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    border: 2px solid #8F6152;
+}
+
+.location-line {
+    z-index: 1000;
+    background-color: #8F6152;
+    width: 2px;
+    height: 6%;
+    position: fixed;
+    left: 3%;
+    transform: translate(50%, 5%);
+}
+
+#location-1 {
+    top: 20%;
+}
+
+#location-welcome-line {
+    top:25%;
+}
+
+#location-2 {
+    top:35%;
+}
+
+#location-why-line {
+    top:40%;
+}
+
+#location-3 {
+    top: 50%;
+}
+
+#location-about-line {
+    top:55%;
+}
+
+#location-4 {
+    top:65%;
+}
+
+#location-work-line {
+    top:70%;
+}
+
+#location-5 {
+    top:80%;
+}
+
+.owner-headshot img {
+    border-radius: 5px;
+    text-align: center;
+    width: 50%;
+}
+
+.svg-arrow {
+    width: 5%;
+    position: absolute;
+    transform: translate(50%,00%);
+}
+
+.cls-1 {
+    fill: #13292A;
+    stroke: #E7DED9;
+    stroke-miterlimit: 10;
+}
+
+@media screen and (max-width: 1000px){
+    .svg-arrow {
+        width: 10%;
+        transform: rotate(90deg);
+        top: 105.5%;
+        left: 45%;
+    }
+
+    .location-check, .location-line {
+        display: none;
+    }
+
+    .owner-headshot img {
+        border-radius: 5px;
+        text-align: center;
+        width: 90%;
+    }
+}
+
+.card {
+    padding: 2%;
+}
+
+.card-container {
+    justify-content: space-evenly;
+    display: flex;
+}

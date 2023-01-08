@@ -1,0 +1,62 @@
+﻿#contact-page {
+    min-height: 90vh;
+}
+
+.contact-progress-circle {
+    z-index: 1000;
+    padding: .5% 2% .5% 2%;
+    border-radius: 5px;
+    border: 2px solid #8F6152;
+}
+
+.contact-progress-circle p {
+    margin-top:5px;
+}
+
+.contact-progress-line {
+    z-index: 1000;
+    background-color: #8F6152;
+    width: 10%;
+    height: 2px;
+    top: 15%;
+    transform: translate(50%, 5%);
+}
+
+label {
+    background-color: white;
+    color: #13292A;
+    width: auto;
+    padding: 0% 2% 0% 2%;
+    position: absolute;
+    font-size: 1em;
+}
+
+input, warning {
+    height: 50px;
+    border: 2px solid #988780;
+    border-radius: 5px;
+    color: #13292A;
+    margin: auto;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 2%;
+}
+
+button {
+
+}
+
+warning {
+    text-align: left;
+    width: 100%;
+    border: 0px;
+    color: #8F6152;
+}
+
+#lbl-fn {
+    left: 18%;
+}
+
+#lbl-ln {
+    left: 55%;
+}
