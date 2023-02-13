@@ -5,23 +5,12 @@ namespace swc.shewellness.Models
 {
     public class ContactModel
     {
-
-        [Required]
-        [Display(Name = "First Name")]
-        public string FirstName { get; set; }
-
-        [Required]
-        [Display(Name = "Last Name")]
-        public string LastName { get; set; }
-
+        public string Name { get; set; }
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
-        public string EmailAddress { get; set; }
-
+        public string Email { get; set; }
         [Required]
-        [Display(Name = "What would you like to know?")]
         public string Message { get; set; }
 
-}
+    }
 }

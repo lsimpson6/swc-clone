@@ -50,59 +50,64 @@ $window.scroll(function () {
     var minusWelcome = document.getElementById('welcome').clientHeight;
     var navHeight = document.getElementById('navigation-header').clientHeight;
 
-    if (window.location.href = "Home") {
         if ($window.scrollTop() > ((welcomeHeight + minusWelcome) - navHeight)) {
             navColor.classList.add('bg-navy');
         }
         else {
             navColor.classList.remove('bg-navy');
         }
-    }
-    else {
-        navColor.classList.add('bg-navy');
-    }
 
+})
 
-    // welcome
-    if ($window.scrollTop() >= (welcomeHeight - screenHeight)) {
-        chk1.style.backgroundColor = '#8F6152';
+document.addEventListener('load', () => {
 
-    }
-    else {
-        chk1.style.backgroundColor = 'transparent';
-    }
+    var bodyPadding = document.getElementById('body-padding-top');
+    var headerHeight = document.querySelector('#navigation-header').getBoundingClientRect();
 
-    // why she wellness
-    if ($window.scrollTop() >= (factFiction - navHeight)) {
-        chk2.style.backgroundColor = '#8F6152';
-    }
-    else {
-        chk2.style.backgroundColor = 'transparent';
-    }
+    bodyPadding = headerHeight + 'px';
+    alert(bodyPadding)
+})
 
-    // about me - my story
-    if ($window.scrollTop() >= (uniquePhys - navHeight)) {
-        chk3.style.backgroundColor = '#8F6152';
-    }
-    else {
-        chk3.style.backgroundColor = 'transparent';
-    }
+//    // welcome
+//    if ($window.scrollTop() >= (welcomeHeight - screenHeight)) {
+//        chk1.style.backgroundColor = '#8F6152';
 
-    // end
-    if ($window.scrollTop() >= (process - navHeight)) {
-        chk4.style.backgroundColor = '#8F6152';
-    }
-    else {
-        chk4.style.backgroundColor = 'transparent';
-    }
+//    }
+//    else {
+//        chk1.style.backgroundColor = 'transparent';
+//    }
 
-    // end
-    if ($window.scrollTop() >= (about - navHeight - (minusWelcome/2))) {
-        chk5.style.backgroundColor = '#8F6152';
-    }
-    else {
-        chk5.style.backgroundColor = 'transparent';
-    }
+//    // why she wellness
+//    if ($window.scrollTop() >= (factFiction - navHeight)) {
+//        chk2.style.backgroundColor = '#8F6152';
+//    }
+//    else {
+//        chk2.style.backgroundColor = 'transparent';
+//    }
+
+//    // about me - my story
+//    if ($window.scrollTop() >= (uniquePhys - navHeight)) {
+//        chk3.style.backgroundColor = '#8F6152';
+//    }
+//    else {
+//        chk3.style.backgroundColor = 'transparent';
+//    }
+
+//    // end
+//    if ($window.scrollTop() >= (process - navHeight)) {
+//        chk4.style.backgroundColor = '#8F6152';
+//    }
+//    else {
+//        chk4.style.backgroundColor = 'transparent';
+//    }
+
+//    // end
+//    if ($window.scrollTop() >= (about - navHeight - (minusWelcome/2))) {
+//        chk5.style.backgroundColor = '#8F6152';
+//    }
+//    else {
+//        chk5.style.backgroundColor = 'transparent';
+//    }
 
     
-})
+//})
