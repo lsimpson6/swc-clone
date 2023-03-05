@@ -1,3 +1,19 @@
-﻿<div>
-    <h2>Thank you</h2>
-</dvi>
+﻿@model ContactModel;
+@{
+    var email = Model.Email;
+    var name = Model.FirstName;
+}
+
+<div class="body-padding-top"></div>
+
+<div class="row-full" style="height:80vh;">
+    <div class="row-lg text-center">
+        <div class="row-half">
+            <h4>Thanks for reaching out, @name!</h4>
+            <p>A conformation email will be sent to <span class="fst-italic">@email</span>, if you don't recieve an email check your spam/junk folder.</p>
+        </div>
+        <div class="row-half">
+            <a class="cta-button p-3" asp-controller="Home" asp-action="Index">Return Home</a>
+        </div>
+    </div>
+</div>

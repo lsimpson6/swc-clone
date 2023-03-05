@@ -8,7 +8,12 @@ namespace swc.shewellness.Controllers
     public class ContactController : Controller
     {
         // for page
+
         public IActionResult Index()
+        {
+            return View();
+        }
+        public IActionResult Bookings()
         {
             return View();
         }
@@ -16,36 +21,47 @@ namespace swc.shewellness.Controllers
         // form specific
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Contact(ContactModel model)
+        public ActionResult Index(ContactModel m)
         {
-            if (ModelState.IsValid)
+            var timeStamp = System.DateTime.Now;
+            try
             {
-                var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
-                var message = new MailMessage();
-                message.To.Add(new MailAddress("simpson.logan19@gmail.com"));  // replace with valid value 
-                message.From = new MailAddress(model.Email);  // replace with valid value
-                message.Subject = "Your email subject";
-                message.Body = string.Format(body, model.Name, model.Email, model.Message);
-                message.IsBodyHtml = true;
-
-                using (var smtp = new SmtpClient())
+                if (ModelState.IsValid)
                 {
-                    var credential = new NetworkCredential
-                    {
-                        UserName = "simpson.logan19@gmail.com",  // replace with valid value
-                        Password = "S0ccer4l1fe019"  // replace with valid value
-                    };
-                    smtp.Credentials = credential;
+                    MailMessage mail = new MailMessage();
+                    mail.To.Add("simpson.logan19@gmail.com");
+                    mail.From = new MailAddress(m.Email);
+                    mail.Subject = "New form submission from " + m.FirstName;
+                    //mail.Sender = new MailAddress(m.Email);
+
+                    string header = "Hey Amber! " + m.FirstName + " " + m.LastName + " just sent you a message.<br/><br/>";
+                    string name = "Name: " + m.FirstName + " " + m.LastName + "<br/>";
+                    string email = "Email: " + m.Email + "<br/>";
+                    string message = "Message: " + m.Message + "<br/>";
+                    string footer = "Reply to them at: " + m.Email + "<br/><br/> This email was sent upon form submission on She Wellness Co at " + timeStamp;
+
+                    mail.Body = header + name + email + message + footer;
+                    mail.IsBodyHtml = true;
+                    SmtpClient smtp = new SmtpClient();
                     smtp.Host = "smtp.gmail.com";
                     smtp.Port = 587;
+                    //smtp.Credentials = new System.Net.NetworkCredential("shewellnessco@gmail.com", "jrnfedmwdlxzexkm");
+                    smtp.Credentials = new System.Net.NetworkCredential("simpson.logan19@gmail.com", "qtjcywpuljqrhycz");
                     smtp.EnableSsl = true;
-                    await smtp.SendMailAsync(message);
-                    smtp.Send(message);
-                    return RedirectToAction("ThankYou");
+                    smtp.UseDefaultCredentials = false;
+                    smtp.Send(mail);
+                    return View("ThankYou", m);
+                }
+                else
+                {
+                    return View("Error");
                 }
             }
-            return View(model);
-
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+                return View("Error");
+            }
         }
 
 

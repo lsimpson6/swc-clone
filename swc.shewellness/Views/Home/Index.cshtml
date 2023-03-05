@@ -5,152 +5,56 @@
 <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
 
 @*Section 1*@
-<div class="width-100 text-sm-center text-center bg-navy d-flex flex-column p-5" id="welcome">
-
-    <div class="p-3 m-auto width-50">
+<div class="row-full bg-navy d-flex flex-column text-center" id="welcome">
+    <div class="width-lg" id="welcome-content">
         <div>
-            <h1 class="text-white p-3 mx-sm-3"><span class="text-bg-animation">You</span> deserve to feel well</h1>
-            <h2 class="text-white p-3 mx-sm-3">Are <span class="text-bg-animation">you</span> ready?</h2>
+            <h3 class="text-white p-3 mx-sm-3"><span class="text-bg-animation">You</span> deserve to feel well. <br />
+                <span style="font-size:1.6em;">Are you ready?</span></h3>
         </div>
         <div class="py-5">
-            <a class="cta-button-wh p-3" href="contact">Book a free call</a>
+            <a class="cta-button-wh p-3" asp-controller="Contact" asp-action="Bookings">Book a free call</a>
         </div>
     </div>
+    <div id="background-overlay-welcome"></div>
 </div>
 
-<div id="fact-vs-fiction"></div>
-@*Section 2*@
-<div class="bg-tan m-auto">
-<div class="br width-80 m-auto d-flex flex-wrap flex-lg-row flex-sm-row-reverse p-lg-5 p-sm-2 parallax" style="z-index:1000;">
+<partial name="_OrgansPartial" />
 
-    @*Circle background moving*@
-@*    <div class="bg-Highlight-navy"></div>*@
-
-
-    <div class="width-60 p-3 m-auto" style="z-index:2;">
-        <div class="width-100 m-auto">
-            <h3 class="py-lg-3 text-light-brown">Finding what's right for you can be overwhelming</h3>
-            <p class="text-navy m-auto lh-large">The internet is flooded with advice about what you <span class="text-red">should</span> and <span class="text-red">shouldn’t</span> be doing to <span class="text-red">improve your fertility, manage your diagnosis, regulate your menstrual cycle and heal your hormones</span>.</p>
-        </div>
-
-    </div>
-
-    <div class="width-40 bg-light-brown br p-3 m-auto" style="z-index:2;">
-        <h3 class="p-lg-5 p-sm-3 text-white lh-large">So, what’s fact and what’s fiction?</h3>
-    </div>
-</div>
-</div>
-
-<div id="unique-physiology"></div>
 @*section 3*@
-<div class="width-100 p-lg-5 p-sm-2">
-    <div class="d-flex flex-wrap-reverse width-80 m-auto">
-        <div class="bg-none br p-3 width-50 pt-lg-5 m-auto">
-            <h3 class="text-navy">Your feminine physiology is uniquely designed. Your nutrition should be that way too.</h3>
-            <p class="text-navy ">
-                Everything you find on the internet <span class="text-red">may be true</span> and simultaneously, <span class="text-red">none of it may be true</span>. I'm here to help <span class="text-red">you</span> find whats right for <span class="text-red">you</span>!
+<div class="row-full">
+    <div class="row-lg d-flex flex-wrap-reverse animate" id="woman-heart-hands">
+        <div class="row-lg bg-shadow text-white text-center">
+            <h3>Your feminine physiology is uniquely designed. Your nutrition should be that way too.</h3>
+            <p>
+                Together, we incorporate an integrative approach to make food enjoyable again, reduce your symptoms and truly feel well. By utilizing real, science-backed nutrition with functional lab testing, we take a deep dive into your health to address underlying causes to make sustainable changes to meet you where you are.
             </p>
-            <p class="text-navy">Are you ready to chat?</p>
-            <div class="d-flex flex-row">
-                <div class="d-flex">
-                    <a class="cta-button p-3" href="#">yes, let's chat</a>
-                </div>            
-                <div class="d-flex mx-2">
-                    <a class="cta-button-rev p-3" href="#">no, i need more info</a>
-                </div>
-            </div>
-        </div>
-        <div class="bg-none br p-3 width-50 mt-lg-5 m-auto text-center">
-            <img class="br" src="https://i.imgur.com/3w9SEZt.png" width="80%"/>
         </div>
     </div>
-</div>
-
-<div id="the-process"></div>
-@*The process*@
-<div class="width-100">
-    <div class="card-container width-80 m-auto p-lg-5 p-sm-1 flex-wrap justify-content-evenly m-auto">
-        <div class="width-100 p-3">
-            <h4>The process</h4>
-            <p>In three easy steps, I can help you find what's right for you and your health.</p>
-        </div>
-        <div class="p-3 width-100 d-flex flex-wrap m-auto bg-red text-white">
-            <div class="width-40 card-img p-2">
-                <img class="br" src="https://i.imgur.com/HqcLyu1.png" width="80%"/>
-            </div>
-
-            <div class="width-60 content p-2 m-auto bg-red text-white">
-                <h4>1. Intitial Consultation</h4>
-                <p class="text-sm">An in-depth analysis at every aspect of your life from birth to present, assessment of reproductive health, mental health, gut health, sleep hygine, food relationship and knowdlege.</p>
-            </div>
-
-        </div>
-
-        <div class="p-3 width-100 d-flex flex-wrap m-auto bg-dark-brown br text-white">
-
-            <div class="width-40 card-img p-2 m-auto">
-                <img class="br" src="https://i.imgur.com/yKsv8EI.png" width="80%" />
-            </div>
-
-            <div class="width-60 content p-2 m-auto">
-                <h4>2. Lab Testing</h4>
-                <p class="text-sm">Based on individual needs, further lab testing may be warrented. Examples may vary from functional thryoid panels, nutrient and mineral status to functional testing evaluating sex and stress hormones as well as an in-depth look at the gut in microbiome.</p>
-            </div>
-
-        </div>
-
-        <div class="p-3 width-100 d-flex flex-wrap m-auto bg-light-brown text-white">
-
-            <div class="width-40 card-img p-2">
-                <img class="br" src="https://i.imgur.com/4AnDAvA.png" width="80%" />
-            </div>
-
-            <div class="width-60 content p-2 m-auto">
-                <h4>3. Implementation</h4>
-                <p class="text-sm">An individualized protocol to suit your lifestyle and needs utilizing a lifestyle and whole-foods-first approach with targeted supplement recommendations when indicated. Follow-up calls and further adjustments highly recommended for a minimum of 3 months.</p>
-            </div>
-
-        </div>
-    </div>
-
 </div>
 
 
 @*Section 5  - cta*@
 
-<div class="width-100 bg-tan my-3">
-    <div class="width-80 py-5 mx-auto p-lg-5 p-sm-2 d-flex flex-wrap">
-        <div class="width-50 m-auto p-3 bg-light-brown br">
-            <h4 class="p-3 text-white">
-                So what do you say
-                <br />
-                <span class="text-tan">Are you ready to get well?</span>
-
-            </h4>
-        </div>
-        <div class="width-50 text-center mx-auto m-4 mt-sm-5 p-lg-3 p-sm-5">
-            <a class="cta-button p-3" href="#">yes, i'm ready</a>
+<div class="row-full bg-light-brown animate">
+    <div class="row-lg d-flex flex-wrap">
+        <div class="row-half text-lg-center text-md-center py-3">
+            <a class="cta-button-wh p-3" asp-controller="Contact" asp-action="Index">Let's get started</a>
         </div>
     </div>
 </div>
 
 <div id="about"></div>
 @*About*@
-<div class="width-80 m-auto d-flex flex-wrap p-5">
-
-    <div class="width-50 m-auto owner-headshot text-center">
-        <img src="https://i.imgur.com/PCdCjNG.jpg" width="100%"/>
-    </div>
-
-    <div class="width-50 m-auto p-4">
-        <h2 class="text-red">Hey, I'm Amber</h2>
-        <p>I’m a candidate for a Board-Certified Nutritionist and Registered Nurse. I’m here to be a trustworthy friend for everything you need to know to make sustainable changes with real evidence-based nutrition to truly heal.</p>
-        <p>Ready to take the next step? Let's see if we're a match!</p>
-        <div class="width-50 pt-3">
-            <a class="cta-button p-3" href="#">connect now</a>
+<div class="row-full">
+    <div class="row-lg d-flex flex-wrap animate">
+        <div class="row-half">
+            <h2 class="">Hey, I'm Amber</h2>
+            <p>I’m a mama, wife, Registered Nurse and Candidate for a Board-Certified Nutrition Specialist. Through my own health struggles, I have discovered the awe-inspiring power of food and the impact true nourishment can have on your symptoms and diagnosis. Now, I have set out on a mission to empower other women to do the same, be informed of their health and truly feel well. The rumors are false: you can have your health and eat your cookies too.</p>
         </div>
+        <div class="row-half text-center">
+            <img src="https://i.imgur.com/vzMPPtE.jpg" width="100%;" />
+        </div>
+
     </div>
-
-
 </div>
 
