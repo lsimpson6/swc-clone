@@ -6,35 +6,43 @@
 
 @model swc.shewellness.Models.ContactModel;
 
-@using (Html.BeginForm())
-{
-    @Html.AntiForgeryToken()
-    <h4>Send your comments.</h4>
-    <hr />
-    <div class="form-group">
-        @Html.LabelFor(m => m.Name, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.Name)
-        </div>
+<div class="body-padding-top"></div>
+<div class="row-full">
+
+    <div class="row-half">
+        <h4>Get in touch!</h4>
+        <p>Have questions, concerns or want to see how the process works? Reach out! Incorporating your specific concerns, diagnosis or goals below will help me to answer in a reasonable, informative manner. Looking forward to chatting with you!</p>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.Email)
+
+
+    <form class="row-half d-flex flex-column" asp-for="Contact" asp-action="Index">
+        @Html.AntiForgeryToken()
+        <div class="form-group row-half">
+            <label>First Name</label>
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "" })
+            <error>Please enter a valid name</error>
         </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Message, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextAreaFor(m => m.Message, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.Message)
+        <div class="form-group row-half">
+            <label>Last Name</label>
+            @Html.TextBoxFor(m => m.LastName, new { @class = "" })
+            <error>Please enter a valid name</error>
         </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Send" />
+
+        <div class="form-group">
+            <label>Email</label>
+            @Html.TextBoxFor(m => m.Email, new { @class = "" })
+            <error>Please enter a valid email address</error>
         </div>
-    </div>
-}
+
+        <div class="form-group">
+            <label>Message</label>
+            @Html.TextAreaFor(m => m.Message, new { @class = "" })
+            <error>Please enter a valid message</error>
+        </div>
+
+        <div class="py-4 px-2">
+            <button class="cta-button p-3 btn" type="submit">Send Message</button>
+        </div>
+    </form>
+
+</div>

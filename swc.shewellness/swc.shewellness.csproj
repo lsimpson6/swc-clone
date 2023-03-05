@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="jQuery.Validation" Version="1.19.5" />
+  </ItemGroup>
+
 </Project>

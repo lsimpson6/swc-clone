@@ -3,37 +3,52 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] | She Wellness Co</title>
+    <title>@ViewData["Title"] | She Wellness Company</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/swc.shewellness.styles.css" asp-append-version="true" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=League+Gothic&family=Lora&display=swap" rel="stylesheet">
+    <script rel="preload" type="text/javascript" src="https://cdn.practicebetter.io/assets/js/booking.widget.js"></script>
 </head>
 <body>
-    <header class="bg-shadow" style="z-index:999; position:fixed; width: 100%; border-radius:0px;" id="navigation-header">
+    @{
+        var bgHeader = "";
+
+        if(ViewData["Title"] == "Home"){
+            bgHeader = "background-color: none;";
+        }
+        else{
+            bgHeader = "background-color:#8F6152;";
+        }
+
+    }
+    <header style="z-index:999; position:fixed; width: 100%; border-radius:0px; @bgHeader" id="navigation-header">
         <nav class="h-25 d" id="navigation-color">
             <div class="d-flex">
-                <div class="width-20 p-3 m-auto">
-                    <a class="navbar-brand d text-white" asp-area="" asp-controller="Home" asp-action="Index">She Wellness Co</a>
+                <div class="row-third p-2">
+                    <a class="navbar-brand d text-white" asp-area="" asp-controller="Home" asp-action="Index">She Wellness Company</a>
                 </div>
-                    <div class="width-60 m-auto text-center p-3">
+                    <div class="row-third m-auto text-center p-3">
                         <ul class="navbar-nav flex-row d-flex m-auto text-center justify-content-center">
                             <li class="nav-item mx-4">
                                 <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
                             <li class="nav-item mx-4">
-                                <a class="nav-link text-white" asp-area="" asp-controller="About" asp-action="Index">My Story</a>
-                            </li>                        
-                            <li class="nav-item mx-4">
+                                <a class="nav-link text-white" asp-area="" asp-controller="About" asp-action="Index">About</a>
+                            </li>
+                        <li class="nav-item mx-4">
+                            <a class="nav-link text-white" asp-area="" asp-controller="About" asp-action="Resources">Resources</a>
+                        </li>
+                        <li class="nav-item mx-4">
                                   <a class="nav-link text-white" asp-area="" asp-controller="Contact" asp-action="Index">Get In Touch</a>
                             </li>
                         </ul>
                     </div>
 
-                    <div class="width-20 p-3 text-right">
+                    <div class="row-third p-3 text-right">
                         <div class="p-3 m-auto">
-                            <a class="cta-button-wh p-3" asp-area="" asp-controller="Contact" asp-action="Index">Book Now</a>
+                        <a class="cta-button-wh p-3" id="nav-cta-btn" asp-area="" asp-controller="Contact" asp-action="Bookings">Book Now</a>
                         </div>
                     </div>
             </div>

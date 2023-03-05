@@ -24,24 +24,36 @@
     transform: translate(50%, 5%);
 }
 
-label {
-    background-color: white;
+.form-group {
+    display: flex;
+    flex-direction: column;
+    padding: 1% 0% 1% 0%;
+    width: 100%;
+}
+
+label, error {
     color: #13292A;
     width: auto;
     padding: 0% 2% 0% 2%;
-    position: absolute;
     font-size: 1em;
 }
 
-input, warning {
+error {
+    color: indianred !important;
+}
+
+input, textarea {
     height: 50px;
     border: 2px solid #988780;
     border-radius: 5px;
     color: #13292A;
     margin: auto;
     font-size: 1.2em;
-    text-align: center;
     margin: 2%;
+}
+
+textarea {
+    height: 150px !important;
 }
 
 button {

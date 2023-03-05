@@ -2,15 +2,34 @@
     background-image: url(https://i.imgur.com/gDGwHcJ.png);
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    height: 100vh;
     position: relative;
+    background-attachment: fixed;
 }
 
 #background-overlay-welcome {
-    background-color: rgba(0,0,0,.3);
-    height: 60vh;
+    background-color: rgba(0,0,0,.45);
+    height: 100%;
+    width: 100%;
     position:absolute;
-    padding:0px;
+    left:0;
+    top:0;
+    z-index: 2;
+}
+
+#welcome-content {
+    z-index: 3;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, 50%);
+}
+
+#woman-heart-hands {
+    background-image: url(https://i.imgur.com/3w9SEZt.png);
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .bg-Highlight-navy {
