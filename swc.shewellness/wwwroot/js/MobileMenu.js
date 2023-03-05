@@ -1,21 +1,20 @@
-﻿var topCircle = document.getElementById('dropdown-mobile-circle1');
-var bottomCircle = document.getElementById('dropdown-mobile-circle2');
-var mainBackground = document.querySelector('#dropdown-mobile');
-var btnDropdown = document.getElementById('dropdown-icon');
-var tmpHeight = 100;
-var tmpWidth = 100;
+﻿var lines = document.querySelectorAll('.lines');
+var t = document.getElementById("lines-1");
+var b = document.getElementById("lines-2");
 
-const maxWidthHeight = 1500;
-const minWidthHeight = 0;
-const speed = 1 / 1000;
+var dropdown = document.getElementById("dropdown-button");
+var menu = document.getElementById('dropdown-mobile');
+var nav = document.getElementById('navigation-header');
 
 
-btnDropdown.addEventListener('click', () => {
-
-    var menu = document.querySelector('.menu');
-
+dropdown.addEventListener('click', () => {    
     if ($(menu).hasClass('collapse')) {
+        nav.style.backgroundColor = '#8F6152';
         menu.classList.remove('collapse');
+        menu.classList.add('d-flex');
     }
-
+    else {
+        menu.classList.add('collapse');
+        menu.classList.remove('d-flex');
+    }
 })

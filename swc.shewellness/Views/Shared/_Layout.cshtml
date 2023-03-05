@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,10 +24,10 @@
 
     }
     <header style="z-index:999; position:fixed; width: 100%; border-radius:0px; @bgHeader" id="navigation-header">
-        <nav class="h-25 d" id="navigation-color">
-            <div class="d-flex">
+        <nav class="h-25" id="navigation-color">
+            <div class="d">
                 <div class="row-third p-2">
-                    <a class="navbar-brand d text-white" asp-area="" asp-controller="Home" asp-action="Index">She Wellness Company</a>
+                    <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">She Wellness Company</a>
                 </div>
                     <div class="row-third m-auto text-center p-3">
                         <ul class="navbar-nav flex-row d-flex m-auto text-center justify-content-center">
@@ -52,10 +52,20 @@
                         </div>
                     </div>
             </div>
+            <div class="m row-full flex-row">
+                <div style="width:50%; padding:2%;">
+                    <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">She Wellness Company</a>
+                </div>
+                <div class="text-right d-flex flex-column m-auto align-items-end" style="width:50%; padding:2%;" id="dropdown-button">
+                    <div class="lines text-right" id="line-1"></div>
+                    <div class="lines text-right" id="line-2"></div>
+                </div>
+
+            </div>
         </nav>
-        @*Mobile menu + dropdown*@
-        <partial name="_MobileMenu">
     </header>
+
+    <partial name="_MobileMenu" />
 
         <div class="" id="body-padding-top"></div>
     
@@ -71,6 +81,7 @@
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     <script src="~/js/animation.js" asp-append-version="true"></script>
+    <script src="~/js/MobileMenu.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
