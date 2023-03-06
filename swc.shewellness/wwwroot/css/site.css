@@ -3,6 +3,18 @@ html {
     overflow-x:hidden;
 }
 
+.disable-scroll {
+    overflow-y:hidden;
+}
+
+.collapse {
+    display: none;
+}
+
+.open {
+    display: flex;
+}
+
 .body-padding-top {
     padding:3%;
 }
@@ -25,7 +37,7 @@ html {
 }
 
 .d {
-    display: block;
+    display: flex;
 }
 
 .m {
@@ -55,7 +67,7 @@ html {
     }
 
     .m {
-        display: block;
+        display: flex;
     }
 }
 
@@ -65,52 +77,22 @@ nav {
 }
 
 .lines {
-    width: 10px;
-    height: 10px;
+    width: 30px;
+    height: 4px;
     background-color: #E7DED9;
-    border-radius: 50%;
+    border-radius: 5px;
+    margin: 2px 0px 2px 0px;
 }
 
 #dropdown-mobile {
-    z-index: 999;
+    z-index: 998;
     position: fixed;
-    background-color: #695853;
+    background-color: red;
     height: 100vh;
     width: 100%;
-    animation: drpMobileShow 3s ease-in 1;
-    opacity:0;
+    transition: all 1s ease;
 }
 
-@keyframes drpMobileShow {
-0%, 90% {visibility: hidden;}
-
-100% {visibility:visible;}
-}
-
-#dropdown-mobile-circle1 {
-    z-index: 1;
-    position: fixed;
-    background-color: #988780;
-    height: 100px;
-    width: 100px;
-    top: 0;
-    right: 0;
-    border-radius: 100%;
-    animation: drpMobileShowComp 1s ease-in 1;
-    transform: translate(50%, -50%);
-}
-
-#dropdown-mobile-circle2 {
-    z-index: 1;
-    position: fixed;
-    background-color: #988780;
-    height: 100px;
-    width: 100px;
-    bottom: 0;
-    border-radius: 100%;
-    animation: drpMobileShowComp 1s ease-in 1;
-    transform: translate(-50%, 50%);
-}
 
 /*@keyframes drpMobileShowComp {
     from {
@@ -154,9 +136,10 @@ h1 {
         text-transform: uppercase;
     }
 
-        a:hover {
-            opacity: .8;
-        }
+    a:hover {
+        color: inherit;
+        opacity: .8;
+    }
 
     p {
         font-size: 1.4em;
@@ -171,6 +154,10 @@ h1 {
     }
 
     @media (max-width:1000px) {
+        .body-padding-top {
+            padding: 10%;
+        }
+
         .text-sm-right {
             text-align: right;
         }
@@ -403,7 +390,7 @@ h1 {
 
 
 @media (max-width: 1000px) {
-    .row-lg, .row-half, .row-thrid {
+    .row-lg, .row-half, .row-third {
         width: 100%;
         padding: 2%;
     }
@@ -490,13 +477,22 @@ h1 {
 
 .nav-link {
     border-top: 2px solid transparent;
-
 }
 
 .nav-link:hover {
     border-top:2px solid white;       
 }
 
+@media screen and (max-width: 1000px){
+    a:hover {
+        opacity: .8;
+    }
+
+    .nav-link:hover {
+        color: inherit;
+        border-top: 2px solid transparent;
+    }
+}
 error {
     color:indianred;
     font-size:.8em;
