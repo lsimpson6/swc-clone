@@ -156,6 +156,10 @@
 
 @media screen and (max-width: 1000px) {
 
+    #background-overlay-welcome, #welcome {
+        height: auto;
+        width: 100vw;
+    }
 
     .svg-arrow {
         width: 10%;
