@@ -11,6 +11,7 @@ dropdown.addEventListener('click', () => {
     if ($(menu).hasClass('collapse')) {
         nav.style.backgroundColor = '#8F6152';
         menu.classList.remove('collapse');
+        menu.classList.add('fade-in')
         menu.classList.add('d-flex');
     }
     else {
