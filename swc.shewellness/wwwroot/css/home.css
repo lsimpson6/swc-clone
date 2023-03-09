@@ -147,40 +147,27 @@
     width: 50%;
 }
 
-.svg-arrow {
-    width: 5%;
-    position: absolute;
-    transform: translate(50%,00%);
-}
 
-.cls-1 {
-    fill: #13292A;
-    stroke: #E7DED9;
-    stroke-miterlimit: 10;
-}
-
-.text-stacked {
-    writing-mode: vertical-lr;
-    transform:rotate(180deg);
-}
-
-.card {
-    padding: 2%;
-}
-
-.card-img {
-    text-align: center;
-}
-
-    .card-img img {
-        width: 80%;
-    }
-
-.card-container {
-    justify-content: space-evenly;
+.organs-icon svg{
+    width:100px;
+    height:100px;
 }
 
 @media screen and (max-width: 1000px) {
+
+    #welcome-content {
+        top: 10%;
+    }
+
+    #welcome, #background-overlay-welcome {
+        height:50vh;
+    }
+
+    .organs-icon svg {
+        width: 70px;
+        height: 70px;
+    }
+
     .svg-arrow {
         width: 10%;
         transform: rotate(90deg);

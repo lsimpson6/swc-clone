@@ -4,7 +4,12 @@
 
   function init() {
       elements = document.querySelectorAll('.animate');
-    windowHeight = window.innerHeight/2;
+      if (window.innerWidth < 768) {
+          windowHeight = window.innerHeight;
+      }
+      else {
+          windowHeight = window.innerHeight / 2;
+      }
   }
 
   function checkPosition() {
