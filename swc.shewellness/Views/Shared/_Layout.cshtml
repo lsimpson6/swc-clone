@@ -8,18 +8,21 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/swc.shewellness.styles.css" asp-append-version="true" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;900&display=swap" rel="stylesheet">
     <script rel="preload" type="text/javascript" src="https://cdn.practicebetter.io/assets/js/booking.widget.js"></script>
 </head>
 <body>
     @{
         var bgHeader = "";
+        var hc = "";
 
         if(ViewData["Title"] == "Home"){
             bgHeader = "background-color: none;";
+            hc = "color: #FFFFFF";
         }
         else{
-            bgHeader = "background-color:#8F6152;";
+            bgHeader = "background-color:#FFFFFF;";
+            hc = "color: #000000";
         }
 
     }
@@ -27,21 +30,21 @@
         <nav class="p-3" id="navigation-color">
             <div class="d">
                 <div class="row-third p-2">
-                    <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">She Wellness Company</a>
+                    <a class="navbar-brand" style="@hc" asp-area="" asp-controller="Home" asp-action="Index">She Wellness Company</a>
                 </div>
                     <div class="row-third m-auto text-center p-3">
                         <ul class="navbar-nav flex-row d-flex m-auto text-center justify-content-center">
                             <li class="nav-item mx-4">
-                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                                <a class="nav-link" style="@hc" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
                             <li class="nav-item mx-4">
-                                <a class="nav-link text-white" asp-area="" asp-controller="About" asp-action="Index">About</a>
+                                <a class="nav-link" style="@hc" asp-area="" asp-controller="About" asp-action="Index">About</a>
                             </li>
                         <li class="nav-item mx-4">
-                            <a class="nav-link text-white" asp-area="" asp-controller="About" asp-action="Resources">Resources</a>
+                            <a class="nav-link" style="@hc" asp-area="" asp-controller="About" asp-action="Resources">Resources</a>
                         </li>
                         <li class="nav-item mx-4">
-                                  <a class="nav-link text-white" asp-area="" asp-controller="Contact" asp-action="Index">Get In Touch</a>
+                                  <a class="nav-link" style="@hc" asp-area="" asp-controller="Contact" asp-action="Index">Get In Touch</a>
                             </li>
                         </ul>
                     </div>
@@ -54,7 +57,7 @@
             </div>
             <div class="m row-full flex-row">
                 <div style="width:50%; padding:2%;">
-                    <a class="navbar-brand text-white" asp-area="" asp-controller="Home" asp-action="Index">She Wellness Company</a>
+                    <a class="navbar-brand" style="@hc" asp-area="" asp-controller="Home" asp-action="Index">She Wellness Company</a>
                 </div>
                 <div class="text-right d-flex flex-column m-auto align-items-end" style="width:50%; padding:2%;" id="dropdown-button">
                     <div class="lines text-right" id="line-1"></div>
@@ -71,7 +74,7 @@
             @RenderBody()
         </main>
     </div>
-    <footer class="d-flex width-100 bg-navy text-white p-3">
+    <footer class="row-full bg-tan text-black d-flex flex-row">
                 <partial name="_FooterPartial">
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
