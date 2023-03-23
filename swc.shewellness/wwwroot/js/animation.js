@@ -1,34 +1,35 @@
 ﻿(function() {
-  var elements;
-  var windowHeight;
+    var elements;
+    var windowHeight;
 
-  function init() {
-      elements = document.querySelectorAll('.animate');
-      if (window.innerWidth < 768) {
-          windowHeight = window.innerHeight;
-      }
-      else {
-          windowHeight = window.innerHeight / 2;
-      }
-  }
+    function init() {
+        elements = document.querySelectorAll('.animate');
 
-  function checkPosition() {
-    for (var i = 0; i < elements.length; i++) {
-      var element = elements[i];
-      var positionFromTop = elements[i].getBoundingClientRect().top;
-
-        if ((positionFromTop - windowHeight) <= 0) {
-          element.classList.add('fade-up');
-          element.classList.remove('animate');
+        if (window.innerWidth < 768) {
+            windowHeight = window.innerHeight;
+        }
+        else {
+            windowHeight = window.innerHeight / 2;
         }
     }
-  }
 
-  window.addEventListener('scroll', checkPosition);
-  window.addEventListener('resize', init);
+    function checkPosition() {
+        for (var i = 0; i < elements.length; i++) {
+            var element = elements[i];
+            var positionFromTop = elements[i].getBoundingClientRect().top;
 
-  init();
-  checkPosition();
+            if ((positionFromTop - windowHeight)*2 <= 0) {
+                element.classList.add('fade-up');
+                element.classList.remove('animate');
+            }
+        }
+    }
+
+    window.addEventListener('scroll', checkPosition);
+    window.addEventListener('resize', init);
+
+    init();
+    checkPosition();
 })();
 
 var screenHeight = (window.innerHeight)/3;

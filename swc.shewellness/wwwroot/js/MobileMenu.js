@@ -1,6 +1,6 @@
 ﻿var lines = document.querySelectorAll('.lines');
-var t = document.getElementById("lines-1");
-var b = document.getElementById("lines-2");
+var t = document.getElementById("line-1");
+var b = document.getElementById("line-2");
 
 var dropdown = document.getElementById("dropdown-button");
 var menu = document.getElementById('dropdown-mobile');
@@ -18,3 +18,10 @@ dropdown.addEventListener('click', () => {
         menu.classList.remove('d-flex');
     }
 })
+
+$(document).ready(function () {
+    $(dropdown).click(function () {
+        $(t).toggleClass('rotated');
+        $(b).toggleClass('rotated-inverse');
+    });
+});
