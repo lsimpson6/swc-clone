@@ -1,4 +1,6 @@
-﻿@{
+﻿<link rel="stylesheet" href="~/css/about.css" asp-append-version="true" />
+
+@{
     ViewData["Title"] = "My Story";
 }
 
@@ -7,7 +9,7 @@
 <div class="row-full">
     <div class="row-lg">
         <div class="row-half nmauto px-0">
-            <h4>She Wellness Company was founded on the principle of empowering women to take back control of their health</h4>
+            <h2>She Wellness Company was founded on the principle of empowering women to take back control of their health</h2>
         </div>
         <div class="row-full">
             <p>The female body is complex; with ever-changing hormones, our nutrient and lifestyle needs often do not fit inside the box of standard research and doctor recommendations. Intuitively, you know when something feels off and here at She Wellness Company we’re ready to listen to your concerns.</p>
@@ -21,16 +23,14 @@
 @*The process*@
 <div class="row-full bg-tan">
     <div class="row-lg d-flex flex-wrap ">
-        <div class="row-full">
-            <div class="row-half nmauto">
-                <h4>How it works</h4>
-            </div>
+        <div class="row-full animate">
+            <h3>How it works</h3>
         </div>
-        <div class="row-full d-flex flex-wrap">
+        <div class="row-full d-flex flex-wrap animate">
+            <div class="row-half img-grow-s" id="how-it-works-1">
+            </div>
             <div class="row-half">
                 <h3 class="text-shadow">01<br />Intitial Consultation</h3>
-            </div>
-            <div class="row-half">
                 <p class="text-sm">
                     Based on individual needs, often further lab testing helps to identify nutrient deficiencies, absorption of nutrients, thyroid status, and any other red flags the body is trying to tell you. Functional lab testing goes one step beyond standard lab testing to assess hormone status, adrenal function, the gut microbiome and more. Common functional tests used are the GI MAP, DUTCH Sex Hormone Testing, DUTCH Adrenal Panel (Cortisol testing) and the Organic Acids Test (OAT).
                     <br />*While functional lab testing can be insightful, it is the most beneficial after establishing and meeting our basic needs.
@@ -39,20 +39,20 @@
 
         </div>
 
-        <div class="row-full d-flex flex-wrap">
-            <div class="row-half">
-                <h3 class="text-shadow">02<br />Lab Testing</h3>
+        <div class="row-full d-flex flex-wrap animate">
+            <div class="row-half img-grow-s" id="how-it-works-2">
             </div>
             <div class="row-half">
+                <h3 class="text-shadow">02<br />Lab Testing</h3>
                 <p class="text-sm">Using a whole-foods first approach, we combine your history, lab results and specific needs to come up with an individualized plan that fits your lifestyle. Often, targeted supplements are warranted in conjunction with nourishment. With a focus on education and empowering you to understand your health, you will have the knowledge to continue to implement these sustainable lifestyle changes long after our time together. </p>
             </div>
         </div>
 
-        <div class="row-full d-flex flex-wrap">
-            <div class="row-half">
-                <h3 class="text-shadow">03<br />Implementation</h3>
+        <div class="row-full d-flex flex-wrap animate">
+            <div class="row-half img-grow-s" id="how-it-works-3">
             </div>
             <div class="row-half">
+                <h3 class="text-shadow">03<br />Implementation</h3>
                 <p class="text-sm">An individualized protocol to suit your lifestyle and needs utilizing a lifestyle and whole-foods-first approach with targeted supplement recommendations when indicated. Follow-up calls and further adjustments highly recommended for a minimum of 3 months.</p>
             </div>
         </div>
