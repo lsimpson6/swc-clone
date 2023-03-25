@@ -2,17 +2,19 @@
     var year = System.DateTime.Today.Year;
 }
 
-@*Left side*@
-<div class="row-twothird">
-    <p class="text-sm">She Wellness Company <br /> &copy; @year All Rights Reserved </p>
-    <a class="text-black text-normal" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-</div>
+<div class="row-full d-flex flex-wrap">
+    @*Left side*@
+    <div class="row-half">
+        <p class="text-sm">She Wellness Company <br /> &copy; @year All Rights Reserved </p>
+    </div>
 
-@*Right side - social icons*@
-<div class="row-half">
-    <div class="text-right d-flex flex-column">
-        <p class="underline">Let's get in touch</p>
-        <a>(000)000-0000</a>
-        <a>shewellness@gmail.con</a>
+    @*Right side - social icons*@
+    <div class="row-half">
+        <div class="text-right-lg d-flex flex-column">
+            <p class="underline">Let's get in touch</p>
+            <a>(000)000-0000</a>
+            <a>shewellness@gmail.con</a>
+            <a class="text-black text-normal" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
     </div>
 </div>

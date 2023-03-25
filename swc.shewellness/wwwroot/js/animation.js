@@ -36,22 +36,18 @@ var screenHeight = (window.innerHeight)/3;
 
 (function () {
 
-    var navColor = document.querySelector('#navigation-color');
-    var navCTA = document.querySelector('#nav-cta-btn');
-
+    var nav = document.querySelector('#navigation-header');
 
     function addHeaderColor() {
         var tmpLoc = window.location.pathname;
         if ((tmpLoc == " " || tmpLoc == "/" || tmpLoc == "Home")) {
             if (window.scrollY > 30) {
-                navColor.classList.add('bg-red');
-                navCTA.classList.remove('cta-button');
-                navCTA.classList.add('cta-button-white');
+                nav.classList.add('color-scheme-tan');
+                nav.classList.remove('color-scheme-none');
             }
             else {
-                navColor.classList.remove('bg-red');
-                navCTA.classList.add('cta-button');
-                navCTA.classList.remove('cta-button-white');
+                nav.classList.remove('color-scheme-tan');
+                nav.classList.add('color-scheme-none');
             }
         }
     }
