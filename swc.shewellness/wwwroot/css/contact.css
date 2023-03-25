@@ -27,8 +27,7 @@
 .form-group {
     display: flex;
     flex-direction: column;
-    padding: 1% 0% 1% 0%;
-    width: 100%;
+    padding: 1% 0% 1% 0% !important;
 }
 
 label, error {
@@ -50,6 +49,7 @@ input, textarea {
     margin: auto;
     font-size: 1.2em;
     margin: 2%;
+    padding: 2%;
 }
 
 textarea {
@@ -65,6 +65,12 @@ warning {
     width: 100%;
     border: 0px;
     color: #8F6152;
+}
+
+.required {
+    margin-left: 1%;
+    color:red;
+    font-size: 1em;
 }
 
 #lbl-fn {

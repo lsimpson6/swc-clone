@@ -8,61 +8,36 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/swc.shewellness.styles.css" asp-append-version="true" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Shippori+Mincho:wght@400;600;800&display=swap" rel="stylesheet">
     <script rel="preload" type="text/javascript" src="https://cdn.practicebetter.io/assets/js/booking.widget.js"></script>
 </head>
 <body>
+
     @{
-        var bgHeader = "";
-        var hc = "";
-
-        if(ViewData["Title"] == "Home"){
-            bgHeader = "background-color: none;";
-            hc = "color: #FFFFFF";
+        var color = "";
+        if (ViewData["Title"] == "Home"){
+            color = "none";
         }
-        else{
-            bgHeader = "background-color:#FFFFFF;";
-            hc = "color: #000000";
+        else {
+            color = "tan";
         }
-
     }
-    <header style="z-index:999; position:fixed; width: 100%; border-radius:0px; @bgHeader" id="navigation-header" class="">
-        <nav class="p-3" id="navigation-color">
-            <div class="d">
-                <div class="row-third p-2">
-                    <a class="navbar-brand" style="@hc" asp-area="" asp-controller="Home" asp-action="Index">She Wellness Company</a>
-                </div>
-                    <div class="row-third m-auto text-center p-3">
-                        <ul class="navbar-nav flex-row d-flex m-auto text-center justify-content-center">
-                            <li class="nav-item mx-4">
-                                <a class="nav-link" style="@hc" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                            </li>
-                            <li class="nav-item mx-4">
-                                <a class="nav-link" style="@hc" asp-area="" asp-controller="About" asp-action="Index">About</a>
-                            </li>
-                        <li class="nav-item mx-4">
-                            <a class="nav-link" style="@hc" asp-area="" asp-controller="About" asp-action="Resources">Resources</a>
-                        </li>
-                        <li class="nav-item mx-4">
-                                  <a class="nav-link" style="@hc" asp-area="" asp-controller="Contact" asp-action="Index">Get In Touch</a>
-                            </li>
-                        </ul>
-                    </div>
 
-                    <div class="row-third p-3 text-right">
-                        <div class="p-3 m-auto">
-                            <a class="cta-button-wh p-3" id="nav-cta-btn" asp-area="" asp-controller="Contact" asp-action="Bookings">Book Now</a>
-                        </div>
-                    </div>
+    <header id="navigation-header" class="color-scheme-@color">
+        <nav class="d-flex flex-row" id="nav-container">
+            <div class="row-half p-4">
+                <a class="nav-title" asp-area="" asp-controller="Home" asp-action="Index">She Wellness Company</a>
             </div>
-            <div class="m row-full flex-row">
-                <div style="width:50%; padding:2%;">
-                    <a class="navbar-brand" style="@hc" asp-area="" asp-controller="Home" asp-action="Index">She Wellness Company</a>
-                </div>
-                <div class="text-right d-flex flex-column m-auto align-items-end" style="width:50%; padding:2%;" id="dropdown-button">
-                    <div class="lines text-right" id="line-1"></div>
-                    <div class="lines text-right" id="line-2"></div>
-                </div>
+            <div class="row-half flex-row p-4 d">
+                <a class="nav" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="nav" asp-area="" asp-controller="About" asp-action="Index">About</a>
+                <a class="nav" asp-area="" asp-controller="About" asp-action="Index">Resources</a>
+                <a class="nav" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
+                <a class="cta-button" asp-area="" asp-controller="Contact" asp-action="Bookings">Book Now</a>
+            </div>
+            <div class="m-auto flex-column p-4 m color-scheme-@color" id="dropdown-button">
+                <div class="lines text-right" id="line-1"></div>
+                <div class="lines text-right" id="line-2"></div>
             </div>
         </nav>
     </header>
