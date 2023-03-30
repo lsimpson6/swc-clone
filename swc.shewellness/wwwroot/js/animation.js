@@ -37,6 +37,7 @@ var screenHeight = (window.innerHeight)/3;
 (function () {
 
     var nav = document.querySelector('#navigation-header');
+    var cta = document.querySelector('#head-cta');
 
     function addHeaderColor() {
         var tmpLoc = window.location.pathname;
@@ -44,10 +45,14 @@ var screenHeight = (window.innerHeight)/3;
             if (window.scrollY > 30) {
                 nav.classList.add('color-scheme-tan');
                 nav.classList.remove('color-scheme-none');
+                cta.classList.add('cta-button');
+                cta.classList.remove('cta-button-w');
             }
             else {
                 nav.classList.remove('color-scheme-tan');
                 nav.classList.add('color-scheme-none');
+                cta.classList.remove('cta-button');
+                cta.classList.add('cta-button-w');
             }
         }
     }
