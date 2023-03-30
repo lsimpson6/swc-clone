@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Resources";
+}
+
+<link rel="stylesheet" href="~/css/resoucres.css" asp-append-version="true" />
+
+<div id="body-padding-top"></div>
+
+@*Section 1*@
+<div class="row-full d-flex flex-column text-center page">
+    <div class="row-lg">
+        <div class="row-half">
+            <h4>Hey there!</h4>
+            <p> We are working hard to get this page set up, at the moment we don't have any resources to share with you. If you'd like to learn more or have any questions send us a message. Thank you for your patience!</p>
+        </div>
+        <div class="width-full justify-content-center py-5 d-flex flex-row">
+            <a class="cta-button mx-2 text-center" asp-controller="Home" asp-action="Index">Return Home</a>
+            <a class="cta-button mx-2 text-center" asp-controller="Contact" asp-action="Index">Contact Us</a>
+        </div>
+    </div>
+</div>
