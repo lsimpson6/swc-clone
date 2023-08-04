@@ -1,0 +1,27 @@
+.admin-button-nav, button {
+    padding: 5%;
+    width: 400px;
+    height: auto;
+    flex-direction: column;
+    border-radius: 10px;
+    display: flex;
+    color: #000000;
+    background-color: #E7DED9;
+    margin: 5% 0px 5% 0px;
+    transition: .3s ease all;
+    transform: scale(95%);
+    border: 0px solid transparent;
+}
+
+.admin-button-nav:hover {
+    transform: scale(100%);
+}
+
+.admin-button-nav .title {
+    font-size: 1.3em;
+}
+
+.admin-button-nav .description {
+    opacity: .7;
+    font-size: 1em;
+}

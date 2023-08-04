@@ -1,38 +1,186 @@
-#welcome {
+/*#welcome {
     background-image: url(https://i.imgur.com/gDGwHcJ.png);
-    background-size:cover;
+    background-size: cover;
     background-position: center;
-    height: 100vh;
-    width: 100vw;
     position: relative;
-    background-attachment: fixed;
+    height: 90vh;
+    width: 60vh;
+
+}*/
+
+#welcome-image, #section-two {
+    background-image: url(https://i.imgur.com/gDGwHcJ.png); 
+    height: 100vh;
+    width: 50%;
+    top:0;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
+
+#organs-side-image {
+    background-image: url(https://images.unsplash.com/photo-1532636785204-753cb2c25594?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80);
+    background-size: cover;
+    height: 70vh;
+}
+
+.invisible-mouse-grid {
+    background-color: transparent;
+    height: 33vh;
+    width: 33%;
+    position: absolute;
+}
+
+.invisible-mouse-grid:nth-of-type(1) {
+    left: 0%;
+    top:0%
+}
+.invisible-mouse-grid:nth-of-type(2) {
+    left: 33%;
+    top:0%;
+}
+.invisible-mouse-grid:nth-of-type(3) {
+    left: 66%;
+    top: 0%;
+}
+.invisible-mouse-grid:nth-of-type(4) {
+    left: 0%;
+    top: 33%;
+}
+.invisible-mouse-grid:nth-of-type(5) {
+    left: 33%;
+    top: 33%;
+}
+.invisible-mouse-grid:nth-of-type(6) {
+    left: 66%;
+    top: 33%;
+}
+.invisible-mouse-grid:nth-of-type(7) {
+    left: 0%;
+    top: 66%;
+}
+.invisible-mouse-grid:nth-of-type(8) {
+    left: 33%;
+    top: 66%;
+}
+.invisible-mouse-grid:nth-of-type(9) {
+    left: 66%;
+    top: 66%;
+}
+
+
+.shadow-text {
+    opacity: .7;
+    z-index: 2;
+    position: absolute;
+    left: 55%;
+    top:48%;
+    letter-spacing: 2px;
+    /*color: #c9bdb1;*/
+}
+.overlay-text {
+    transition: ease .3s all;
+    z-index: 3;
+    position: absolute;
+    left: 55%;
+    top:48%;
+    letter-spacing: 2px;
+    /*color: #c9bdb1;*/
+}
+
+.fixed {
+    position: fixed !important;
+}
+
+#down-arrow {
+    position: absolute;
+    z-index: 999 !important;
+    left: 90%;
+    top: 80vh;
+    cursor: pointer;
+}
+#down-arrow svg {
+    width: 70px;
+    height: auto;
+    transform: translateY(0px);
+    cursor: pointer;
+}
+
+#scroll-text {
+    position: absolute; 
+    left: -50%;
+    top:25%;
+    transform: translate(25%, 00%);
+}
+
+@keyframes mda {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    25% {
+        transform: translateY(25px);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    75% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+}
+
 
 #background-overlay-welcome {
     background-color: rgba(0,0,0,.45);
     height: 100%;
     width: 100%;
-    position:absolute;
-    left:0;
-    top:0;
-    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2 !important;
 }
+
 
 #welcome-content {
     width: 100%;
-    z-index: 3;
-    position: absolute;
+    z-index: 3 !important;
+    position: inherit;
+    background-attachment:fixed;
     left: 50%;
     top: 20%;
     transform: translate(-50%, 50%);
 }
+#womens-health {
+    background-image: url(https://images.unsplash.com/photo-1488778578932-0f84d315fcae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=762&q=80g);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+
 
 #woman-heart-hands {
     background-image: url(https://i.imgur.com/3w9SEZt.png);
-    background-size:cover;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    height: 70vh;
+}
+
+#amber-headshot {
+    background-image: url(https://i.imgur.com/vzMPPtE.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
 }
 
 .bg-Highlight-navy {
@@ -69,7 +217,7 @@
     }
 }
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
     .bg-Highlight-navy {
         width: 100%;
         height: 80px;
@@ -86,60 +234,16 @@
     }
 }
 
-.location-check, .nohover:hover {
-    z-index: 1000;
-    position: fixed;
-    left: 2.5%;
-    width: 20px;
-    height: 20px;
-    border-radius: 5px;
-    border: 2px solid #8F6152;
-}
-
-.location-line {
-    z-index: 1000;
-    background-color: #8F6152;
-    width: 2px;
-    height: 6%;
-    position: fixed;
-    left: 3%;
-    transform: translate(50%, 5%);
-}
-
-#location-1 {
-    top: 20%;
-}
-
-#location-welcome-line {
-    top:25%;
-}
-
-#location-2 {
-    top:35%;
-}
-
-#location-why-line {
-    top:40%;
-}
-
-#location-3 {
-    top: 50%;
-}
-
-#location-about-line {
-    top:55%;
-}
-
 #location-4 {
-    top:65%;
+    top: 65%;
 }
 
 #location-work-line {
-    top:70%;
+    top: 70%;
 }
 
 #location-5 {
-    top:80%;
+    top: 80%;
 }
 
 .owner-headshot img {
@@ -149,17 +253,81 @@
 }
 
 
-.organs-icon svg{
-    width:100px;
-    height:100px;
+.organs-icon svg {
+    width: 100px;
+    height: 100px;
 }
 
-@media screen and (max-width: 1000px) {
+.fh-hh, .fh, .fh-fit {
+    height: 100vh;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .fh-hh {
+        height: 50vh;
+    }
+
+    .fh-fit {
+        height: fit-content;
+    }
+
+    .shadow-overlay {
+        background-color: rgba(0,0,0,.6);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+    }
+
+    #welcome-image, #section-two {
+        width: 100%;
+    }
+
+    .invisible-mouse-grid {
+        display: none;
+    }
 
     #welcome {
         position: relative;
         background-attachment: initial;
         background-repeat: no-repeat;
+    }
+
+    .shadow-text {
+        opacity: 1;
+        z-index: 2;
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        letter-spacing: 2px;
+        /*color: #c9bdb1;*/
+    }
+
+    .overlay-text {
+        display: none;
+    }
+
+    .fixed {
+        position: fixed !important;
+    }
+
+    #down-arrow {
+        position: absolute;
+        z-index: 999 !important;
+        left: 10%;
+        top: 80%;
+        cursor: pointer;
+    }
+
+    #down-arrow svg {
+        width: 70px;
+        height: auto;
+        transform: translateY(0px);
+        cursor: pointer;
+        fill: #ffffff;
     }
 
     .svg-arrow {
@@ -178,6 +346,7 @@
         text-align: center;
         width: 90%;
     }
+
     .card-img img {
         width: 100%;
     }

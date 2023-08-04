@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="~/swc.shewellness.styles.css" asp-append-version="true" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Shippori+Mincho:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;900&display=swap" rel="stylesheet">
     <script rel="preload" type="text/javascript" src="https://cdn.practicebetter.io/assets/js/booking.widget.js"></script>
 </head>
 <body>
@@ -23,19 +26,20 @@
         }
     }
 
-    <header id="navigation-header" class="color-scheme-@color">
-        <nav class="d-flex flex-row" id="nav-container">
+    <header id="navigation-header" class="py-1 color-scheme-none">
+       <nav class="d-flex flex-row justify-content-between" id="nav-container">
             <div class="row-half p-4">
                 <a class="nav-title" asp-area="" asp-controller="Home" asp-action="Index">She Wellness Company</a>
             </div>
-            <div class="row-half flex-row p-4 d">
-                <a class="nav" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                <a class="nav" asp-area="" asp-controller="About" asp-action="Index">About</a>
-                <a class="nav" asp-area="" asp-controller="Resources" asp-action="Index">Resources</a>
-                <a class="nav" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
-                <a class="cta-button" id="head-cta" asp-area="" asp-controller="Contact" asp-action="Bookings">Book Now</a>
+            <div class="row-half flex-row p-4 d justify-content-end">
+                <div class="d-flex flex-row">
+                <a class="nav mx-3" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                <a class="nav mx-3" asp-area="" asp-controller="About" asp-action="Index">About</a>
+                <a class="nav mx-3" asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
+                <a class=" mx-3 cta-button text-nowrap" asp-area="" asp-controller="Contact" asp-action="Bookings">Book Now</a>
+                </div>
             </div>
-            <div class="m-auto flex-column p-4 m color-scheme-@color" id="dropdown-button">
+            <div class="m-auto flex-column p-4 m color-scheme-tan" id="dropdown-button">
                 <div class="lines text-right" id="line-1"></div>
                 <div class="lines text-right" id="line-2"></div>
             </div>
@@ -49,12 +53,12 @@
             @RenderBody()
         </main>
     </div>
-    <footer class="row-full bg-tan text-black d-flex flex-row">
+    <footer class="bg-tan text-black d-flex flex-row" style="z-index: 999 !important;" id="footer">
                 <partial name="_FooterPartial">
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/NewsletterPreview.js" asp-append-version="true"></script>
     <script src="~/js/animation.js" asp-append-version="true"></script>
     <script src="~/js/MobileMenu.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)

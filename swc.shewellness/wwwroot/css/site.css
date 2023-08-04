@@ -1,5 +1,5 @@
 html, body {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto Slab', serif;
     overflow-x: hidden;
 }
 
@@ -29,16 +29,54 @@ html, body {
     width: 100%;
 }
 
+.nav {
+    width: auto;
+    margin: auto 5px auto 5px;
+}
+
+    .nav:after {
+        content: "";
+        position: absolute;
+        top: 35%;
+        width: 0;
+        height: 2.5px;
+        background-color: #8F6152;
+        transition: width .3s ease-in-out;
+    }
+
+.nav:after:nth-of-type(1) {
+    left: 68%;
+}
+
+.nav:after:nth-of-type(1) {
+    left: 78%;
+}
+
+.nav:after:nth-of-type(1) {
+    left: 98%;
+}
+
+.nav:hover::after{
+    width: 50px;
+}
+
+.gradient-text {
+    background: -webkit-linear-gradient(45deg, #988780, #c9bdb1 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .nav, .nav-title {
-    text-decoration: overline 2px solid transparent;
+    /*text-decoration: overline 2px solid transparent;*/
     color: #ffffff;
     margin: auto;
     transition: all .3s ease;
+    min-width: 40px;
 }
 
 .nav-title:hover {
     opacity: 1;
-    text-decoration: overline 2px solid transparent;
+    /*text-decoration: overline 2px solid transparent;*/
     color: inherit;
 }
 
@@ -89,6 +127,10 @@ html, body {
     padding-top:80px;
 }
 
+.tc-lg {
+    text-align: center;
+}
+
 @media screen and (max-width: 1300px) {
 
     #body-padding-top {
@@ -103,6 +145,14 @@ html, body {
 
 
     @media screen and (max-width: 768px) {
+
+        .tc-sm {
+            text-align: center;
+        }
+
+        .tc-lg {
+            text-align: left;
+        }
 
         #body-padding-top {
             padding-top: 80px;
@@ -219,7 +269,7 @@ p {
     text-underline-offset: 10px;
 }
 
-@media (max-width:1000px) {
+@media (max-width:768px) {
 
     .text-sm-right {
         text-align: right;
@@ -231,7 +281,7 @@ p {
     }
 
     h1 {
-        font-size: 2em;
+        font-size: 4em;
         font-weight: 500;
     }
 
@@ -320,17 +370,27 @@ p {
 }
 
 .bg-white, .bg-none {
-    color: #FFFFFF;
+    background-color: #ffffff;
+}
+
+.color-scheme-navy {
+    background-color: #13292A;
+    color: #ffffff;
+}
+
+.color-scheme-red {
+    background-color: #8F6152;
+    color: #ffffff;
 }
 
 .color-scheme-none {
     background-color: transparent;
-    color: #ffffff;
+    color: #000000;
 }
 
-.color-scheme-none .nav, .color-scheme-none .nav-title {
-    color: #ffffff;
-}
+    .color-scheme-none .nav, .color-scheme-none .nav-title {
+        color: #000000;
+    }
 
 .color-scheme-none .lines {
     background-color: #ffffff;
@@ -342,8 +402,8 @@ p {
 
 .color-scheme-none .nav:hover {
     transition: all .3s ease;
-    text-decoration: overline 2px solid #ffffff;
-    color: #ffffff;
+    /*text-decoration: overline 2px solid #000000;*/
+    color: #000000;
     opacity: .8;
 }
 
@@ -358,7 +418,7 @@ p {
 
 .color-scheme-tan .nav:hover {
     transition: all .3s ease;
-    text-decoration: overline 2px solid #000000;
+    /*text-decoration: overline 2px solid #000000;*/
     color: #000000;
     opacity: .8;
 }
@@ -403,11 +463,11 @@ p {
     padding: 10px;
 }
 
-.cta-button-w:hover {
-    border: 2px solid #ffffff;
-    background-color: transparent;
-    color: #ffffff;
-}
+    .cta-button-w:hover {
+        border: 2px solid #8F6152;
+        background-color: transparent;
+        color: inherit;
+    }
 
 .cta-button:hover {
     border: 2px solid #8F6152;
@@ -422,19 +482,19 @@ p {
 /*Widths*/
 
 .row-full {
+    position: relative;
     width: 100%;
-    padding: 2% 0% 2% 0%;
     margin: auto;
+    padding: 2% 0% 2% 0%;
+    z-index: 5;
 }
 
 .row-lg {
     width: 80%;
-    padding: 3%;
     margin: auto;
 }
 
 .row-half, row-half-f {
-    flex: 1 1 auto;
     width: 50%;
     padding: 3%;
     margin: auto;
@@ -442,13 +502,11 @@ p {
 
 .row-third, .row-third-f {
     width: 33%;
-    padding: 3%;
     margin: auto;
 }
 
 .row-twothird, .row-twothird-f {
     width: 66%;
-    padding: 3%;
     margin: auto;
 }
 
@@ -482,7 +540,7 @@ img {
 }
 
 
-    @media (max-width: 1000px) {
+    @media (max-width: 768px) {
         img {
             width: 100%;
         }

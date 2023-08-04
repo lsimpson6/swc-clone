@@ -1,0 +1,100 @@
+﻿@namespace swc.shewellness.Models
+@{
+    ViewData["Title"] = "Edit";
+    string username = "logan";
+    string password = "admin";
+}
+
+@using swc.shewellness.Models;
+@model swc.shewellness.Models.AdminModel;
+
+@{
+    
+    SendEmailViewModel emailModel = new SendEmailViewModel();
+    string enteredPassword = Model?.Password;
+    string enteredUsername = Model?.Username;
+}
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/contact.css" asp-append-version="true" />
+
+@if(enteredPassword == password && enteredUsername == username){
+
+
+    <div class="row-full fh d-flex flex-wrap mt-5">
+        <form class="row-half d-flex flex-wrap" asp-for="@emailModel" asp-action="Newsletter">
+            @*Email List*@
+            <div class="form-group d-flex flex-column row-full">
+                <label asp-for="@emailModel.EmailList">Email List</label>
+                <textarea asp-for="@emailModel.EmailList"></textarea>
+            </div>
+            @*date*@
+            <div class="form-group d-flex flex-column row-full">
+                <label asp-for="@emailModel.Date">Date</label>
+                <input id="nl-m-date" type="date" asp-for="@emailModel.Date">
+            </div>
+            @*Subject*@
+            <div class="form-group d-flex flex-column row-full">
+                <label asp-for="@emailModel.Subject">Email Subject</label>
+                <input id ="nl-m-subject" type="text" asp-for="@emailModel.Subject">
+            </div>
+            @*Month*@
+            <div class="form-group d-flex flex-column row-full">
+                <label asp-for="@emailModel.Month">Month</label>
+                <input id="nl-m-month" type="text" asp-for="@emailModel.Month">
+            </div>
+            @*Image One*@
+            <div class="form-group d-flex flex-column row-full">
+                <label asp-for="@emailModel.ImageOne">Head Image</label>
+                <input id="nl-m-image-one"  type="text" asp-for="@emailModel.ImageOne">
+            </div>
+            @*Image two*@
+            <div class="form-group d-flex flex-column row-full">
+                <label asp-for="@emailModel.ImageTwo">Body Image</label>
+                <input type="text" asp-for="@emailModel.ImageTwo">
+            </div>
+            @*Heading*@
+            <div class="form-group d-flex flex-column row-full">
+                <label asp-for="@emailModel.Heading">Title</label>
+                <input id="nl-m-heading" type="text" asp-for="@emailModel.Heading">
+            </div>
+            @*Subheading*@
+            <div class="form-group d-flex flex-column row-full">
+                <label asp-for="@emailModel.Subheading">Subheading</label>
+                <input id="nl-m-subhead" type="text" asp-for="@emailModel.Subheading">
+            </div>
+            @*Description*@
+            <div class="form-group d-flex flex-column row-full">
+                <label asp-for="@emailModel.Description">Description</label>
+                <textarea id="nl-m-description" wrap="hard" type="text" asp-for="@emailModel.Description"></textarea>
+            </div>
+             @*Resources *@
+            <div class="form-group d-flex flex-column row-full">
+                <label asp-for="@emailModel.Subheading">Resources / Citations / Footnotes</label>
+                <textarea id="nl-m-resources" wrap="hard" type="text" asp-for="@emailModel.Resources"></textarea>
+            </div>
+
+            <div class="py-4 px-2">
+                <button class="cta-button p-3 btn" type="submit">Send Newsletter</button>
+            </div>
+        </form>
+        <div class="row-half">
+            <h2>Newsletter Preview</h2>
+
+            <partial name="Newsletter" model="@emailModel">
+        </div>
+    </div>
+
+}
+else if (!string.IsNullOrEmpty(enteredPassword) || !string.IsNullOrEmpty(enteredUsername))
+{
+    <div class="row-full text-center" id="">
+        <h5 class="incorrect-field">Login Failed</h5>
+        <p class="incorrect-field">incorrect password or username</p>
+    </div>
+}
+else {
+    <div class="row-full text-center" id="">
+        <h5>Enter your username and password</h5>
+    </div>
+}

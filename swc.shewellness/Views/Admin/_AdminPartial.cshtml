@@ -1,0 +1,37 @@
+﻿@namespace swc.shewellness.Models
+@{
+    ViewData["Title"] = "Edit";
+    string username = "logan";
+    string password = "admin";
+}
+
+@using swc.shewellness.Models;
+@model swc.shewellness.Models.AdminModel;
+
+@{
+    
+    SendEmailViewModel emailModel = new SendEmailViewModel();
+    string enteredPassword = Model?.Password;
+    string enteredUsername = Model?.Username;
+}
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/contact.css" asp-append-version="true" />
+
+@if(enteredPassword == password && enteredUsername == username){
+
+    <partial name="_HomePartial" model="Model" />
+
+}
+else if (!string.IsNullOrEmpty(enteredPassword) || !string.IsNullOrEmpty(enteredUsername))
+{
+    <div class="row-full text-center" id="">
+        <h5 class="incorrect-field">Login Failed</h5>
+        <p class="incorrect-field">incorrect password or username</p>
+    </div>
+}
+else {
+    <div class="row-full text-center" id="">
+        <h5>Enter your username and password</h5>
+    </div>
+}
