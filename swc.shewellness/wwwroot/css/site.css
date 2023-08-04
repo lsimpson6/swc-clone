@@ -29,6 +29,10 @@ html, body {
     width: 100%;
 }
 
+.color-scheme-none .nav {
+    mix-blend-mode:lighten;
+}
+
 .nav {
     width: auto;
     margin: auto 5px auto 5px;
@@ -72,13 +76,14 @@ html, body {
     margin: auto;
     transition: all .3s ease;
     min-width: 40px;
+
 }
 
-.nav-title:hover {
-    opacity: 1;
-    /*text-decoration: overline 2px solid transparent;*/
-    color: inherit;
-}
+    .nav-title:hover {
+        opacity: 1;
+        /*text-decoration: overline 2px solid transparent;*/
+        color: inherit;
+    }
 
 .open {
     display: flex;
@@ -145,6 +150,15 @@ html, body {
 
 
     @media screen and (max-width: 768px) {
+
+        .nav-title, .color-scheme-none .nav-title {
+            color: white !important;
+
+        }
+
+        .nav-title, .color-scheme-tan .nav-title {
+            color: #000000 !important;
+        }
 
         .tc-sm {
             text-align: center;
@@ -255,6 +269,7 @@ a, a:hover {
 
 p {
     font-size: 1.2em;
+    padding-top:2%;
 }
 
 .lh-large {
@@ -281,7 +296,7 @@ p {
     }
 
     h1 {
-        font-size: 4em;
+        font-size: 3em;
         font-weight: 500;
     }
 
@@ -390,6 +405,7 @@ p {
 
     .color-scheme-none .nav, .color-scheme-none .nav-title {
         color: #000000;
+
     }
 
 .color-scheme-none .lines {
@@ -535,14 +551,19 @@ p {
 }
 
 img {
-    z-index: 999;
-    border-radius: 3.5px;
+    max-height: 600px;
+    max-width: 400px;
+
+    z-index: 0;
+    object-fit: cover;
 }
 
 
     @media (max-width: 768px) {
         img {
             width: 100%;
+            height: 400px;
+            object-fit: cover;
         }
 
         .row-overlap {
@@ -553,7 +574,14 @@ img {
 
         .row-lg, .row-half, .row-third {
             width: 100%;
-            padding: 2%;
+        }
+
+        .row-lg {
+            padding: 5%;
+        }
+
+        .row-half, .width-full {
+            padding: 4% 2% 4% 2%;
         }
     }
 
