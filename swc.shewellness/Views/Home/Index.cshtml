@@ -4,7 +4,7 @@
 
 <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
 
-<div class="row-full p-0" style="height: 100vh; position: relative; z-index: 1;" id="main-head">
+<div class="row-full p-0 fh" style=" position: relative; z-index: 1;" id="main-head">
 
     <div class="invisible-mouse-grid" data-mouse-location="1"></div>
     <div class="invisible-mouse-grid" data-mouse-location="2"></div>
@@ -36,80 +36,65 @@
 </div>
 
 
-@*Section 1*@
-@*<div class="row-full bg-navy d-flex flex-column text-center" id="welcome">
-    <div class="width-lg" id="welcome-content">
-        <div class="width-full">
-            <h3 class="text-white width-100"><span class="text-bg-animation">You</span> deserve to feel well. <br />
-                <span style="font-size:1.6em;">Are you ready?</span></h3>
-        </div>
-        <div class="width-full text-center py-5">
-            <a class="cta-button-w p-3" asp-controller="Contact" asp-action="Bookings">Book a free call</a>
-        </div>
-    </div>
-    <div id="background-overlay-welcome"></div>
-</div>*
-
-
-
-@*section 3*@
-
-<div class="row-full color-scheme-navy d-flex align-items-center fh-hh">
-    <div class="row-half d-flex flex-column">
-        <h3 class="text-white-50 animate">Founded on the principle of</h3>
-        <h1 class="text-white animate">empowering women to take back control of their health.</h1>
-    </div>
-</div>
-
-@*<div class="row-full bg-navy">
-    <div class="row-half text-center text-nowrap">
-        <h2 class="gradient-text" id="scroll-text">Your health, your happiness. Your health, your happiness. Your health, your happiness. Your health, your happiness. Your health, your happiness.</h2>
-    </div>
-</div>*@
-
-<partial name="_OrgansPartial" />
-
-<div class="row-full color-scheme-tan d-flex flex-wrap">
-    <div class="row-half tc-lg">
-        <h3 class="animate">Schedule your free call</h3>
-        <p class="animate">Knowing where to start can be difficult, book a free call to schedule a 1-1 meeting to beging your personal journey to health.</p>
-        <div class="row-full py-5 animate">
-            <a class="cta-button-w my-5 p-3" asp-controller="Contact" asp-action="Bookings">Book a Free Call</a>
-        </div>
-    </div>
-</div>
-
-<div class="row-full color-scheme-navy d-flex align-items-center  fh-hh">
-    <div class="row-half d-flex flex-column">
-        <h3 class="text-white-50 animate">Your feminine physiology is uniquely designed. </h3>
-        <h1 class="animate">Your nutrition should be that way too.</h1>
-    </div>
-</div>
-
-<div class="row-full bg-none fh-fit">
-    <div class="row-lg d-flex flex-wrap m-auto">
-        <div class="row-half animate" id="woman-heart-hands">
-        </div>
-        <div class="row-half">
-            <p class="animate">
-                Together, we incorporate an integrative approach to make food enjoyable again, reduce your symptoms and truly feel well. By utilizing real, science-backed nutrition with functional lab testing, we take a deep dive into your health to address underlying causes to make sustainable changes to meet you where you are.
-            </p>
-            <div class="row-full my-5 animate">
-                <a class="cta-button-w p-3" asp-controller="Contact" asp-action="Index">Let's get started</a>
+<div class="row-full color-scheme-navy d-flex align-items-center fh">
+    <div class="row-lg  d-flex align-items-center">
+        <div class="row-half d-flex flex-column">
+            <h3 class="text-white-50 animate py-sm-3">Founded on the principle of</h3>
+            <h1 class="text-white animate">empowering women to take back control of their health.</h1>
+            <div class="row-full py-5 animate">
+                <a class="cta-button-w my-5 p-3" asp-controller="Contact" asp-action="Index">Take Back Your Health</a>
             </div>
         </div>
     </div>
 </div>
 
-@*About*@
-<div class="row-full position-relative bg-none">
-    <div class="row-lg d-flex flex-wrap-reverse m-auto">
-        <div class="row-half">
-            <h2 class="animate">Hey, I'm Amber</h2>
-            <p class="animate">I’m a mama, wife, Registered Nurse and Candidate for a Board-Certified Nutrition Specialist. Through my own health struggles, I have discovered the awe-inspiring power of food and the impact true nourishment can have on your symptoms and diagnosis. Now, I have set out on a mission to empower other women to do the same, be informed of their health and truly feel well. The rumors are false: you can have your health and eat your cookies too.</p>
+<div class="row-full color-scheme-none d-flex flex-column-reverse align-items-center hh">
+    <div class="row-lg">
+        <div class="row-half m-auto d-flex flex-column">
+            <p class="animate">
+                Together, we incorporate an integrative approach to make food enjoyable again, reduce your symptoms and truly feel well. By utilizing real, science-backed nutrition with functional lab testing, we take a deep dive into your health to address underlying causes to make sustainable changes to meet you where you are.
+            </p>
         </div>
-        <div class="row-half animate" id="amber-headshot">
+        <div class="m-auto row-half text-center">
+            <img src="https://i.imgur.com/3w9SEZt.png" width="auto" height="600px" alt="Woman making heart over baby in womb." />
         </div>
     </div>
+</div>
+
+<div class="row-full color-scheme-tan d-flex align-items-center">
+    <div class="row-lg d-flex align-items-center">
+        <div class="row-half d-flex flex-column">
+            <h3 class="animate">Schedule your free call</h3>
+            <p class="animate">Knowing where to start can be difficult, book a free call to schedule a 1-1 meeting to beging your personal journey to health.</p>
+            <div class="row-full py-5 animate">
+                <a class="cta-button-w my-5 p-3" asp-controller="Contact" asp-action="Bookings">Book a Free Call</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row-full color-scheme-navy d-flex align-items-center fh">
+    <div class="row-lg d-flex align-items-center">
+        <div class="row-half d-flex flex-column">
+            <h3 class="text-white-50 animate">Your feminine physiology is uniquely designed. </h3>
+            <h1 class="animate">Your nutrition should be that way too.</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row-full color-scheme-none d-flex flex-wrap align-items-center hh">
+    <div class="row-lg d-flex flex-wrap-reverse align-items-center">
+        <div class="row-half m-auto d-flex flex-column">
+            <h2 class="animate">Hey, I'm Amber</h2>
+            <p class="animate">I’m a mama, wife, Registered Nurse and Candidate for a Board-Certified Nutrition Specialist. Through my own health struggles, I have discovered the awe-inspiring power of food and the impact true nourishment can have on your symptoms and diagnosis. Now, I have set out on a mission to empower other women to do the same, be informed of their health and truly feel well. The rumors are false: you can have your health and eat your cookies too.</p>
+            <div class="row-full py-5 animate">
+                <a class="cta-button-w my-5 p-3" asp-controller="Contact" asp-action="Index">Contact Me</a>
+            </div>
+        </div>
+        <div class="m-auto row-half text-center">
+            <img src="https://i.imgur.com/vzMPPtE.jpg" width="auto"  height="600px" alt="Amber Adkins, Owner and Founder of She Wellness Co." />
+        </div>
+    </div>
+
 </div>
 
