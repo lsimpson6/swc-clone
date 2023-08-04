@@ -34,4 +34,8 @@ app.MapControllerRoute(
     name: "contact",
     pattern: "{controller=Contact}/{action=Index}/{id?}");
 
+app.MapControllerRoute(
+    name: "admin",
+    pattern: "{controller=Admin}/{action=Index}/{id?}");
+
 app.Run();

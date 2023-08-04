@@ -1,0 +1,53 @@
+﻿@namespace swc.shewellness.Models
+@using swc.shewellness.Models;
+@model swc.shewellness.Models.AdminModel;
+@{
+    ViewData["Title"] = "Admin Home";
+}
+
+@{
+    SendEmailViewModel emailModel = new SendEmailViewModel();
+}
+
+<link rel="stylesheet" href="~/css/contact.css" asp-append-version="true" />
+
+
+@if(Model.Password == "admin" && Model.Username == "logan") {
+    <div class="row-full p-5">
+
+        <style>
+            #adminloginsection, #navigation-header, #footer {
+                display: none !important;
+            }
+        </style>
+
+        <div class="row-lg">
+            <h1>Welcome to the admin menu!</h1>
+        </div>
+
+        <div class="row-lg fh d-flex flex-wrap justify-content-between">
+
+            <form asp-for="Admin" asp-action="Newsletter">
+                <button class="admin-button-nav" type="submit">
+                    <p class="title">Newsletter</p>
+                    <p class="description">Write and send a newsletter to your clients</p>
+                </button>
+            </form>       
+        
+            <form asp-for="Admin" asp-action="Index">
+            <a class="admin-button-nav">
+                <p class="title">Email</p>
+                <p class="description">Write and send an email to a list of clients as a group or individual.</p>
+            </a>        
+            </form>
+
+            <form asp-for="Admin" asp-action="Index">
+            <a class="admin-button-nav">
+                <p class="title">View Clients</p>
+                <p class="description">View a list of your clients.</p>
+            </a>
+            </form>   
+
+        </div>
+    </div>
+}
