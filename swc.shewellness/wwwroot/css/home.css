@@ -137,30 +137,6 @@
 
 }
 
-.organ-card {
-    position: relative;
-    width: 300px;
-    height: 500px;
-    background-color: #f1f1f1;
-    padding: 3% 3% 9% 3%;
-    margin: 2%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-}
-
-.organ-card svg {
-    padding:6%;
-    margin: auto;
-    text-align: center;
-    width: 150px;
-}
-
-.organ-card p {
-    text-align: left;
-    padding: 4%;
-}
-
 
 #background-overlay-welcome {
     background-color: rgba(0,0,0,.45);
@@ -243,22 +219,6 @@
 
 @media screen and (max-width: 1000px) {
 
-    .organ-card {
-        height: 350px;
-        margin: 2% auto 2% auto;
-    }
-
-    .organ-card svg {
-        padding: 6%;
-        margin: auto;
-        text-align: center;
-        width: 150px;
-    }
-
-    .organ-card p {
-        text-align: center;
-        padding: 4%;
-    }
 
     #woman-heart-hands, #womens-health, #amber-headshot, #organs-side-image {
         height: 40vh;
@@ -318,23 +278,9 @@
     height: 100px;
 }
 
-.fh-hh, .fh, .fh-fit {
-    height: 100vh;
-}
-
 
 @media screen and (max-width: 768px) {
-    .fh {
-        height: 80vh;
-    }
 
-    .fh-hh {
-        height: 50vh;
-    }
-
-    .fh-fit {
-        height: fit-content;
-    }
 
     .shadow-overlay {
         background-color: rgba(0,0,0,.6);
