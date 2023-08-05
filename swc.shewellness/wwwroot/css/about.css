@@ -29,7 +29,33 @@
     background-position: center;
 }
 
+.font-background {
+    background-color: #8F6152;
+    width: 100%;
+    height: auto;
+    padding: .5% 1% .5% 1%;
+    color: #ffffff;
+}
+
+.line-height-lg h3 {
+    line-height: 60px;
+}
+
 @media screen and (max-width: 850px) {
+
+    .color-scheme-none .nav, .color-scheme-none .nav-title, .color-scheme-none .lines {
+        color: #000000 !important;
+    }
+    .color-scheme-none .lines {
+        background-color: #000000;
+    }
+    .color-scheme-tan .nav, .color-scheme-tan .nav-title {
+        color: #000000 !important;
+    }
+
+    .line-height-lg h3 {
+        line-height: 35px;
+    }
 
     #about-image, #section-two {
         height: 30vh;
