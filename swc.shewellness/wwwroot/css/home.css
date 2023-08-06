@@ -11,11 +11,22 @@
 #welcome-image, #section-two {
     background-image: url(https://i.imgur.com/gDGwHcJ.png); 
     height: 100vh;
-    width: 50%;
+    width: 100%;
     top:0;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.full-shadow {
+    z-index: 2;
+    background-color: #000000;
+    opacity: .7;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    left:0;
+    top:0;
 }
 
 #organs-side-image {
@@ -68,6 +79,10 @@
     top: 66%;
 }
 
+.color-scheme-none .nav, .color-scheme-none .nav-title, .color-scheme-none .nav:hover, .color-scheme-none .nav-title:hover {
+    color: #ffffff;
+}
+
 
 .shadow-text {
     opacity: .7;
@@ -95,15 +110,31 @@
 #down-arrow {
     position: absolute;
     z-index: 999 !important;
-    left: 90%;
-    top: 80vh;
+    left: 12%;
+    top: 70vh;
     cursor: pointer;
+    animation: headArrow 2s ease infinite;
 }
 #down-arrow svg {
     width: 70px;
     height: auto;
     transform: translateY(0px);
     cursor: pointer;
+}
+
+@keyframes headArrow {
+    0% {
+        opacity: 0;
+        top:65vh;
+    }
+    30%, 60% {
+        opacity: 1;
+        top: 70vh;
+    }
+    80%, 100% {
+        opacity: 0;
+        top: 75vh;
+    }   
 }
 
 #scroll-text {
