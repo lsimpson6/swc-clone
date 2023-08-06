@@ -1,0 +1,38 @@
+﻿@model ErrorModel;
+@{
+    ViewData["Title"] = "404";
+    var code = Model.ErrorCode;
+}
+
+<style>
+.color-scheme-none .nav, .color-scheme-none .nav-title {
+    color: white !important;
+}
+
+</style>
+
+<div class="row-full color-scheme-navy d-flex align-items-center fh">
+    <div class="row-lg  d-flex align-items-center">
+        <div class="row-lg d-flex flex-column text-center">
+            <div class="d-flex flex-row" id="fourfour">
+                <div class="error-lbl">
+                    <h1>4</h1>
+                </div>                
+                <div class="error-lbl">
+                    <h1>0</h1>
+                </div>               
+                <div class="error-lbl">
+                    <h1>4</h1>
+                </div>
+            </div>
+            <div id="pagenotfound">
+                <h4>page not found</h4>
+            </div>
+            <div class="row-full py-5 animate">
+                <a class="cta-button-w my-5 p-3" asp-controller="Home" asp-action="Index">Return Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
