@@ -69,7 +69,7 @@ var screenHeight = (window.innerHeight)/3;
 (function () {
 
     let dwbs = document.getElementById('down-arrow');
-    var mainHead = $('#main-head').outerHeight();
+    var mainHead = $('#welcome-image').outerHeight();
 
     dwbs.addEventListener('click', () => {
         $('html, body').animate({ scrollTop: mainHead - 0 }, "ease");
