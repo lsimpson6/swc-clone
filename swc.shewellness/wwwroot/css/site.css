@@ -193,6 +193,53 @@ html, body {
     height: 100vh;
 }
 
+#fourfour{
+    position: relative;
+    flex-wrap: wrap;
+    min-width: 400px;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+#pagenotfound {
+    margin: auto;
+    margin-top: 5%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.error-lbl {
+    position: relative;
+    margin: auto;
+    flex-direction: row;
+    background-color: #f1f1f1;
+    width: 100px;
+    height: 100px;
+    color: #000000;
+    border-radius: 3%;
+}
+
+.error-lbl h1 {
+    color: #000000;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    mix-blend-mode:revert;
+}
+
+
+#mouth {
+    margin: 5% auto 5% auto;
+    width: 200px;
+    height: 70px; /* as the half of the width */
+    border-top-left-radius: 1300px; /* 100px of height + 10px of border */
+    border-top-right-radius: 1300px; /* 100px of height + 10px of border */
+    border: 10px solid gray;
+    border-bottom: 0;
+}
+
 
 
     @media screen and (max-width: 1300px) {
