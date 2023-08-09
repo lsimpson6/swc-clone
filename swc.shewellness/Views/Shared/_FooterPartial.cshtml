@@ -2,18 +2,24 @@
     var year = System.DateTime.Today.Year;
 }
 
-<div class="row-full d-flex flex-wrap">
-    @*Left side*@
-    <div class="row-half">
-        <p class="text-sm">She Wellness Company <br /> &copy; @year All Rights Reserved </p>
+<div class="row-lg d-flex flex-wrap">
+    <div class="row-half d-flex flex-column">
+        <div class="row-50 d-flex">
+            <p class="underline">Let's take back your health</p>
+        </div>
+        <div class="row-50 d-flex flex-lg-nowrap flex-wrap">
+            <a class="nav " asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+            <a class="nav " asp-area="" asp-controller="About" asp-action="Index">About</a>
+            <a class="nav " asp-area="" asp-controller="Contact" asp-action="Index">Contact</a>
+            <a class="nav " asp-area="" asp-controller="Contact" asp-action="Bookings">Book Now</a>
+        </div>
     </div>
-
-    @*Right side - social icons*@
-    <div class="row-half">
-        <div class="text-right-lg d-flex flex-column">
-            <p class="underline">Let's get in touch</p>
-            <a>shewellness@gmail.con</a>
-            <a class="text-black text-normal" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <div class="row-half d-flex flex-column">
+        <div class="row-50 d-flex">
+            <p class="m-0">She Wellness Company</p>
+        </div>
+        <div class="row-50 d-flex">
+            <p class="m-0">&copy All rights reserved - @year</p>
         </div>
     </div>
 </div>
