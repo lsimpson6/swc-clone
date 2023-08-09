@@ -29,10 +29,6 @@ html, body {
     width: 100%;
 }
 
-.color-scheme-none .nav {
-    mix-blend-mode:lighten;
-}
-
 .nav {
     width: auto;
     margin: auto 5px auto 5px;
@@ -180,17 +176,6 @@ html, body {
         padding: 4%;
     }
 
-    .hh, .hh-fit, .hh-th {
-        height: 50vh;
-    }
-
-    .qh-hh {
-        height: 70vh;
-    }
-
-.fh-hh, .fh, .fh-fit {
-    height: 100vh;
-}
 
 #fourfour{
     position: relative;
@@ -242,45 +227,8 @@ html, body {
 
 
 
-    @media screen and (max-width: 1300px) {
-
-        #body-padding-top {
-            padding-top: 100px;
-        }
-
-        .text-right-lg {
-            text-align: left;
-        }
-    }
-
-@media screen and (max-width: 1300px) {
-    .fh {
-        height: fit-content;
-
-    }
-
-    .fh-hh, .hh, .qh-hh {
-        height: fit-content;
-    }
-
-    .fh-fit, .hh-fit {
-        height: fit-content;
-    }
-}
-
 
     @media screen and (max-width: 768px) {
-        .fh {
-            height: 80vh;
-        }
-
-        .fh-hh, .hh, .qh-hh {
-            height: 50vh;
-        }
-
-        .fh-fit, .hh-fit {
-            height: fit-content;
-        }
 
         .nav-title, .color-scheme-none .nav-title {
             color: white !important;
@@ -367,40 +315,6 @@ to {
 
 
     /*Text Types*/
-    h1 {
-        font-size: 4em;
-        font-weight: 500;
-    }
-
-    h2 {
-        font-size: 3.5em;
-    }
-
-    h3 {
-        font-size: 2.5em;
-        font-weight: 500;
-    }
-
-    h4 {
-        font-size: 2em;
-    }
-
-    h5 {
-        font-size: 1.7em
-    }
-
-    a, a:hover {
-        color: #000000;
-        cursor: pointer;
-        text-decoration: none;
-        font-size: 1.2em;
-        text-transform: none;
-    }
-
-    p {
-        font-size: 1.2em;
-        padding-top: 2%;
-    }
 
     .lh-large {
         line-height: 150%;
@@ -439,32 +353,6 @@ to {
             text-align: right;
         }
 
-        p {
-            font-size: 1.2em;
-            font-weight: 300;
-        }
-
-        h1 {
-            font-size: 3em;
-            font-weight: 500;
-        }
-
-        h2 {
-            font-size: 2em;
-        }
-
-        h3 {
-            font-size: 1.5em;
-            font-weight: 500;
-        }
-
-        h4 {
-            font-size: 1.5em;
-        }
-
-        h5 {
-            font-size: 1.3em;
-        }
     }
 
 
@@ -644,42 +532,6 @@ to {
         margin: 0% !important;
     }
     /*Widths*/
-    .row-100 {
-        width: 100%;
-    }
-
-    .row-50 {
-        width: 50%;
-    }
-
-    .row-full {
-        position: relative;
-        width: 100%;
-        margin: auto;
-        padding: 2% 0% 2% 0%;
-        z-index: 5;
-    }
-
-    .row-lg {
-        width: 80%;
-        margin: auto;
-    }
-
-    .row-half, row-half-f {
-        width: 50%;
-        padding: 3%;
-        margin: auto;
-    }
-
-    .row-third, .row-third-f {
-        width: 33%;
-        margin: auto;
-    }
-
-    .row-twothird, .row-twothird-f {
-        width: 66%;
-        margin: auto;
-    }
 
     .row-overlap {
         z-index: 100;
@@ -730,17 +582,6 @@ to {
             width: 100%;
         }
 
-        .row-lg, .row-half, .row-third {
-            width: 100%;
-        }
-
-        .row-lg {
-            padding: 5%;
-        }
-
-        .row-half, .width-full {
-            padding: 4% 2% 4% 2%;
-        }
     }
 
     /*circles*/
@@ -779,8 +620,8 @@ to {
         z-index: 3000;
     }
 
-        footer p, .text-normal {
-            font-size: 1.2em !texportant;
+        footer p, footer a, .text-normal {
+            font-size: 1.2em !important;
             text-transform: none;
         }
 
@@ -795,6 +636,11 @@ to {
         }
 
     @media screen and (max-width: 1000px) {
+
+        .first {
+            padding-top:300px;
+        }
+
         .cta {
             text-align: left;
         }

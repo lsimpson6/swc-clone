@@ -1,0 +1,233 @@
+/*text types */
+/*Defualt */
+
+h1 {
+    font-size: 4em;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 3.5em;
+}
+
+h3 {
+    font-size: 2.5em;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 2em;
+}
+
+h5 {
+    font-size: 1.7em
+}
+
+a, a:hover {
+    color: #000000;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1.2em;
+    text-transform: none;
+}
+
+p {
+    font-size: 1.2em;
+    padding-top: 2%;
+}
+
+/* Small Computer / tablet */
+@media (max-width: 1350px){
+    h1 {
+        font-size: 3.8em;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: 3.3em;
+    }
+
+    h3 {
+        font-size: 2.3em;
+        font-weight: 500;
+    }
+
+    h4 {
+        font-size: 1.8em;
+    }
+
+    h5 {
+        font-size: 1.5em
+    }
+
+    a, a:hover {
+        color: #000000;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 1em;
+        text-transform: none;
+    }
+
+    p {
+        font-size: 1em;
+        padding-top: 2%;
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 800px){
+    h1 {
+        font-size: 3em;
+        font-weight: 500;
+    }
+
+    h2 {
+        font-size: 2.6em;
+    }
+
+    h3 {
+        font-size: 1.8em;
+        font-weight: 500;
+    }
+
+    h4 {
+        font-size: 1.5em;
+    }
+
+    h5 {
+        font-size: 1.3em
+    }
+
+    a, a:hover {
+        color: #000000;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 1.2em;
+        text-transform: none;
+    }
+
+    p {
+        font-size: 1.2em;
+        padding-top: 2%;
+    }
+
+}
+
+/* end text and fonts */
+
+/* container heights */
+
+.hh, .hh-fit, .hh-th {
+    min-height: 50vh;
+    height: fit-content;
+}
+
+.qh-hh {
+    min-height: 70vh;
+    height: fit-content;
+}
+
+.fh-hh, .fh, .fh-fit {
+    min-height: 100vh;
+    height: fit-content;
+}
+
+@media (max-width: 1300px) {
+    .hh, .hh-fit, .hh-th, .qh-hh, .fh-hh, .fh, .fh-fit {
+        min-height: 50vh;
+        height: fit-content;
+    }
+}
+
+@media (max-width: 1000px) {
+    .hh, .hh-fit, .hh-th, .qh-hh, .fh-hh, .fh, .fh-fit {
+        height: fit-content;
+    }
+}
+
+/* end heights */
+
+/* row defualts */
+
+.row-100 {
+    width: 100%;
+}
+
+.row-50 {
+    width: 50%;
+}
+
+.row-full {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding: 2% 0% 2% 0%;
+    z-index: 5;
+}
+
+.row-lg {
+    max-width: 1300px;
+    width: 80%;
+    margin: auto;
+}
+
+.row-half, row-half-f {
+    width: 50%;
+    padding: 3%;
+    margin: auto;
+}
+
+.row-third, .row-third-f {
+    width: 33%;
+    margin: auto;
+}
+
+.row-twothird, .row-twothird-f {
+    width: 66%;
+    margin: auto;
+}
+
+
+
+@media (max-width: 1000px) {
+
+    .row-lg, .row-half, .row-third {
+        width: 100%;
+    }
+
+    .row-lg {
+        padding: 4%;
+    }
+
+    .row-half, .width-full {
+        padding: 4% 2% 4% 2%;
+    }
+
+}
+/* end row defualts */
+
+#footer a , footer p, #footer .nav {
+    color: #000000 !important;
+    font-size: .5em;
+    white-space:nowrap;
+
+}
+
+#footer a:hover {
+    opacity: .8;
+}
+
+#footer .nav {
+    margin-right: 3em;
+}
+
+@media (max-width: 1000px) {
+
+    #footer .nav {
+        width: 50%;
+        margin-right: 0em;
+    }
+}
