@@ -36,43 +36,12 @@ var screenHeight = (window.innerHeight)/3;
 
 (function () {
 
-    var nav = document.querySelector('#navigation-header');
-    var cta = document.querySelector('#head-cta');
-
-    function addHeaderColor() {
-        var tmpLoc = window.location.pathname;
-        //if ((tmpLoc == " " || tmpLoc == "/" || tmpLoc == "Home")) {
-        if (window.scrollY > 30) {
-            if ($(nav).hasClass('color-scheme-none')) {
-                nav.classList.add('color-scheme-tan');
-                nav.classList.remove('color-scheme-none');
-                cta.classList.add('cta-button');
-                cta.classList.remove('cta-button-w');
-            }
-        }
-        else {
-            if ($(nav).hasClass('color-scheme-tan')) {
-                nav.classList.remove('color-scheme-tan');
-                nav.classList.add('color-scheme-none');
-                cta.classList.remove('cta-button');
-                cta.classList.add('cta-button-w');
-            }
-        }
-        //}
-    }
-
-    window.addEventListener('scroll', addHeaderColor);
-
-
-})();
-
-(function () {
-
     let dwbs = document.getElementById('down-arrow');
     var mainHead = $('#welcome-image').outerHeight();
+    let header = $('#navigation-header').outerHeight();
 
     dwbs.addEventListener('click', () => {
-        $('html, body').animate({ scrollTop: mainHead - 0 }, "ease");
+        $('html, body').animate({ scrollTop: mainHead - header }, "ease");
     })
 
 

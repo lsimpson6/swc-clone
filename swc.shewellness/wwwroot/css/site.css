@@ -230,13 +230,13 @@ html, body {
 
     @media screen and (max-width: 768px) {
 
-        .nav-title, .color-scheme-none .nav-title {
+/*        .nav-title, .color-scheme-none .nav-title {
             color: white !important;
         }
 
         .nav-title, .color-scheme-tan .nav-title {
             color: #000000 !important;
-        }
+        }*/
 
         .tc-sm {
             text-align: center;
@@ -443,10 +443,10 @@ to {
         color: #000000;
     }
 
-        .color-scheme-none .nav, .color-scheme-none .nav-title {
+/*        .color-scheme-none .nav, .color-scheme-none .nav-title {
             color: #000000;
         }
-
+*/
         .color-scheme-none .lines {
             background-color: #ffffff;
         }
@@ -514,7 +514,6 @@ to {
         color: #E7DED9;
         text-align: center;
         border-radius: 5px;
-        font-size: 1.2em;
         padding: 10px;
     }
 
@@ -623,10 +622,10 @@ to {
         z-index: 3000;
     }
 
-        footer p, footer a, .text-normal {
-            font-size: 1.2em !important;
-            text-transform: none;
-        }
+    .text-normal {
+        font-size: 1.2em !important;
+        text-transform: none;
+    }
 
     .social-icons {
         margin: auto;
@@ -640,8 +639,13 @@ to {
 
     @media screen and (max-width: 1000px) {
 
+  /*      .color-scheme-none .nav, .color-scheme-none .nav-title, .color-scheme-none .nav:hover, .color-scheme-none .nav-title:hover {
+            color: #ffffff !important;
+        }
+*/
+
         .first {
-            padding-top:300px;
+            padding-top:50px !important;
         }
 
         .cta {
@@ -657,6 +661,13 @@ to {
             margin: 10%;
         }
     }
+
+@media screen and (max-width: 353px) {
+
+    .first {
+        padding-top: 65px !important;
+    }
+}
 
     /*animation to fade in */
 
@@ -685,7 +696,6 @@ to {
 
         .nav-link:hover {
             color: white;
-            border-top: 2px solid transparent !important;
         }
     }
 
