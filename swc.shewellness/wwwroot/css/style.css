@@ -210,8 +210,8 @@ p {
 /* end row defualts */
 
 #footer a , footer p, #footer .nav {
-    color: #000000 !important;
-    font-size: .5em;
+    color: #505050 !important;
+    font-size: 1em;
     white-space:nowrap;
 
 }

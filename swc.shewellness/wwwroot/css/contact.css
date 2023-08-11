@@ -131,6 +131,17 @@ warning {
     animation: incorrect .2s ease 3;
 }
 
+.shadow {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,.65);
+    z-index: 1;
+}
+
+
 @keyframes incorrect {
     0% {
         color: darkred;
@@ -146,6 +157,11 @@ warning {
     }
 
 }
+/*
+.color-scheme-none .nav, .color-scheme-none .nav-title, .color-scheme-none .nav:hover, .color-scheme-none .nav-title:hover {
+    color: #ffffff;
+}*/
+
 
 @media screen and (max-width: 850px){
     #contact-shadow {

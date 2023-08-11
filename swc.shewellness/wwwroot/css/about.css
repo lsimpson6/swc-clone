@@ -43,16 +43,6 @@
 
 @media screen and (max-width: 850px) {
 
-    .color-scheme-none .nav, .color-scheme-none .nav-title, .color-scheme-none .lines {
-        color: #000000 !important;
-    }
-    .color-scheme-none .lines {
-        background-color: #000000;
-    }
-    .color-scheme-tan .nav, .color-scheme-tan .nav-title {
-        color: #000000 !important;
-    }
-
     .line-height-lg h3 {
         line-height: 35px;
     }
