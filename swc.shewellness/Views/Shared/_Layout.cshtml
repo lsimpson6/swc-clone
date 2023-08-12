@@ -16,7 +16,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;900&display=swap" rel="stylesheet">
-    <script rel="preload" type="text/javascript" src="https://cdn.practicebetter.io/assets/js/booking.widget.js"></script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K7MCV4TW27"></script>
@@ -69,12 +68,12 @@
     <footer class="color-scheme-none d-flex flex-row" style="z-index: 999 !important;" id="footer">
         <partial name="_FooterPartial">
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/NewsletterPreview.js" asp-append-version="true"></script>
-    <script src="~/js/animation.js" asp-append-version="true"></script>
-    <script src="~/js/MobileMenu.js" asp-append-version="true"></script>
-    <script rel="preload" type="text/javascript" src="~/js/header.js"></script>
+    <script async src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script defer rel="preload" type="text/javascript" src="~/js/header.js"></script>
+    <script async src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+@*    <script aync src="~/js/NewsletterPreview.js" asp-append-version="true"></script>*@
+    <script async src="~/js/animation.js" asp-append-version="true"></script>
+    <script async src="~/js/MobileMenu.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
