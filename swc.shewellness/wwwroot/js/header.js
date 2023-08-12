@@ -1,34 +1,36 @@
 ﻿var header = document.querySelector('.nav-header');
-var firstElement = document.querySelector('.row-full'); 
+var firstEl = document.querySelector('.row-full');
+var firstElementIsImage;
 var links = document.querySelectorAll('.nav-color-selectors');
-
 var dropdownClick = document.getElementById('dropdown-button');
 
 dropdownClick.addEventListener('click', () => {
     //if open
     if (!($('#dropdown-mobile').hasClass('collapse'))) {
-        setNavTextColor(true);
+        setNavTextColor(true, firstElementIsImage);
     }
     else {
-        setNavTextColor(false);
+        setNavTextColor(false, firstElementIsImage);
     }
 });
 
 window.addEventListener('load', () => {
-    setNavTextColor();
-})
-window.addEventListener('scroll', ()=> {
+    firstElementIsImage = firstEl.getAttribute('data-background');
+    setNavTextColor(false, firstElementIsImage);
+});
+
+window.addEventListener('scroll', () => {
     if (!($('#dropdown-mobile').hasClass('collapse'))) {
-        setNavTextColor(true);
+        setNavTextColor(true, firstElementIsImage);
     }
     else {
-        setNavTextColor(false);
+        setNavTextColor(false, firstElementIsImage);
     }
-})
+});
 
-function setNavTextColor(navIsOpen) {
+function setNavTextColor(navIsOpen, isImage) {
 
-    if (navIsOpen) {
+    if (navIsOpen && isImage == 'false') {
         if ($(header).hasClass('color-scheme-tan')) {
             linksColor(links, "text-black", "text-white", "#000000");
         }
@@ -37,10 +39,10 @@ function setNavTextColor(navIsOpen) {
         }
     }
     else {
-        if ($(header).hasClass('color-scheme-none') && $(firstElement).hasClass('bg-image')) {
+        if ($(header).hasClass('color-scheme-none') && isImage == 'true' || isImage == 'false' && ($(firstEl).hasClass('color-scheme-navy'))) {
             linksColor(links, "text-white", "text-black", "#ffffff");
         }
-        else if ($(header).hasClass('color-scheme-none') && !($(firstElement).hasClass('bg-image')) || $(header).hasClass('color-scheme-tan')) {
+        else if ($(header).hasClass('color-scheme-none') && isImage == 'false' || $(header).hasClass('color-scheme-tan')) {
             linksColor(links, "text-black", "text-white", "#000000");
         }
     }
