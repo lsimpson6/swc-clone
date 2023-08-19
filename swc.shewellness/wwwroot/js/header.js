@@ -7,18 +7,21 @@ var nav = document.querySelector('#navigation-header');
 
 
 dropdown.addEventListener('click', () => {
+
+    let menuText = document.getElementById('mm-text');
     if ($(menu).hasClass('collapse')) {
         menu.classList.remove('collapse');
         menu.classList.add('fade-in')
         menu.classList.add('d-flex');
+        menuText.innerText = "X";
     }
     else {
         menu.classList.add('collapse');
         menu.classList.remove('d-flex');
+        menuText.innerText = "Menu";
     }
 
-    $(t).toggleClass('rotated');
-    $(b).toggleClass('rotated-inverse');
+
 })
 
 

@@ -82,6 +82,11 @@ html, body {
         color: inherit;
     }
 
+#dropdown-button:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
 .open {
     display: flex;
 }
@@ -469,12 +474,9 @@ to {
             color: #000000;
         }
 */
-        .color-scheme-none .lines {
-            background-color: #ffffff;
+        .color-scheme-none #mm-text {
+            color: #ffffff;
         }
-.color-scheme-white .lines {
-    background-color: #000000;
-}
 
     .color-scheme-tan .lines {
         background-color: #000000;
@@ -486,7 +488,7 @@ to {
         color: #000000;
         opacity: .8;
     }
-.color-scheme-white .nav, .color-scheme-white .nav-title {
+.color-scheme-white .nav, .color-scheme-white .nav-title, .color-scheme-white #mm-text {
     transition: all .3s ease;
     color: #000000;
 }
