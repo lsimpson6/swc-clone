@@ -26,20 +26,20 @@ $(function () {
 
     function addHeaderColor() {
         var tmpLoc = window.location.pathname;
-        //if ((tmpLoc == " " || tmpLoc == "/" || tmpLoc == "Home")) {
-        if (window.scrollY > 30) {
-            if ($(nav).hasClass('color-scheme-none')) {
-                nav.classList.add('color-scheme-white');
-                nav.classList.remove('color-scheme-none');
+        if ((tmpLoc == " " || tmpLoc == "/" || tmpLoc == "Home")) {
+            if (window.scrollY > 30) {
+                if ($(nav).hasClass('color-scheme-none')) {
+                    nav.classList.add('color-scheme-white');
+                    nav.classList.remove('color-scheme-none');
+                }
+            }
+            else {
+                if ($(nav).hasClass('color-scheme-white')) {
+                    nav.classList.remove('color-scheme-white');
+                    nav.classList.add('color-scheme-none');
+                }
             }
         }
-        else {
-            if ($(nav).hasClass('color-scheme-white')) {
-                nav.classList.remove('color-scheme-white');
-                nav.classList.add('color-scheme-none');
-            }
-        }
-        //}
     }
 
     window.addEventListener('scroll', addHeaderColor);
