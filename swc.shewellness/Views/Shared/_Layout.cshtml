@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="swc:image" property="og:image" content="https://instagram.forf1-3.fna.fbcdn.net/v/t51.2885-15/292276417_413541437387182_2494857351682512683_n.jpg?stp=dst-jpg_e35&_nc_ht=instagram.forf1-3.fna.fbcdn.net&_nc_cat=110&_nc_ohc=c3DtO5r_CFoAX-MXtsX&edm=ABmJApABAAAA&ccb=7-5&ig_cache_key=Mjg3ODIwMjY1MDAzOTQ3Njg3Ng%3D%3D.2-ccb7-5&oh=00_AfDo30lvnYYcgmnM3japJYFQZaynQbd940dswxSiyp9enA&oe=64D263FB&_nc_sid=b41fef" /> <!-- invalid, but expected -->
-    <link property="image" href="https://instagram.forf1-3.fna.fbcdn.net/v/t51.2885-15/292276417_413541437387182_2494857351682512683_n.jpg?stp=dst-jpg_e35&_nc_ht=instagram.forf1-3.fna.fbcdn.net&_nc_cat=110&_nc_ohc=c3DtO5r_CFoAX-MXtsX&edm=ABmJApABAAAA&ccb=7-5&ig_cache_key=Mjg3ODIwMjY1MDAzOTQ3Njg3Ng%3D%3D.2-ccb7-5&oh=00_AfDo30lvnYYcgmnM3japJYFQZaynQbd940dswxSiyp9enA&oe=64D263FB&_nc_sid=b41fef" /> <!-- valid -->
+    <meta name="Description" content="She Wellness Company was founded on the principle of empowering women to take back control of their health. Using a whole-foods first approach combined with conventional and functional lab testing, we can help to uncover underlying root causes while aiming to reduce or eliminate symptoms, heal your relationship with food, nourish your body, and truly feel well.">
+    <link property="image" href="@ViewData["Image"]" /> <!-- valid -->
     <title>@ViewData["Title"] | She Wellness Company</title>
-    <link rel="icon" src="https://instagram.forf1-3.fna.fbcdn.net/v/t51.2885-15/292276417_413541437387182_2494857351682512683_n.jpg?stp=dst-jpg_e35&_nc_ht=instagram.forf1-3.fna.fbcdn.net&_nc_cat=110&_nc_ohc=c3DtO5r_CFoAX-MXtsX&edm=ABmJApABAAAA&ccb=7-5&ig_cache_key=Mjg3ODIwMjY1MDAzOTQ3Njg3Ng%3D%3D.2-ccb7-5&oh=00_AfDo30lvnYYcgmnM3japJYFQZaynQbd940dswxSiyp9enA&oe=64D263FB&_nc_sid=b41fef" width="30px" height="30px"/>
+    <link rel="icon" href="https://imgur.com/b6VYNx2"/>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://i.imgur.com/QMAYwSJ.png" />
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-K7MCV4TW27"></script>
@@ -23,22 +24,22 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-K7MCV4TW27');
 </script>
 <body>
 
     @{
-        var color = "";
-        if (ViewData["Title"] == "Home"){
+        var color = "white";
+        var title = ViewData["Title"];
+        if (title == "Home"){
             color = "none";
         }
         else {
-            color = "tan";
+            color = "white";
         }
     }
 
-    <header id="navigation-header" class="nav-header py-1 color-scheme-none">
+    <header id="navigation-header" class="nav-header py-1 color-scheme-@color" data-text-color="">
        <nav class="d-flex flex-row justify-content-between" id="nav-container">
             <div class="row-half p-4">
                 <a class="nav-title nav-color-selectors" asp-area="" asp-controller="Home" asp-action="Index">She Wellness Company</a>
@@ -69,11 +70,9 @@
         <partial name="_FooterPartial">
     </footer>
     <script async src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script defer rel="preload" type="text/javascript" src="~/js/header.js"></script>
     <script async src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 @*    <script aync src="~/js/NewsletterPreview.js" asp-append-version="true"></script>*@
     <script async src="~/js/animation.js" asp-append-version="true"></script>
-    <script async src="~/js/MobileMenu.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

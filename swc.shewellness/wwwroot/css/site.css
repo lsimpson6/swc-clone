@@ -16,6 +16,7 @@ html, body {
     margin:0px !important;
 }
 
+
 #navigation-header {
     transition: all .3s ease;
     z-index: 999;
@@ -133,18 +134,12 @@ html, body {
 }
 
 .organ-card, .cards {
-    position: relative;
-    padding: 3% 3% 9% 3%;
-    margin: 2%;
-    text-align: center;
+    width: 50%;
     display: flex;
+    margin: auto;
+    flex-direction: row;
 }
 
-.organ-card {
-    flex-direction: column !important;
-    width: 300px;
-    height: 500px;
-}
 
 .cards {
     flex-direction: row;
@@ -169,9 +164,11 @@ html, body {
         margin: auto;
         text-align: center;
         width: 150px;
+
     }
 
     .organ-card p {
+        margin: auto;
         text-align: left;
         padding: 4%;
     }
@@ -229,6 +226,13 @@ html, body {
 
 
     @media screen and (max-width: 768px) {
+
+        .organ-card, .cards {
+            width: 100%;
+            display: flex;
+            margin: auto;
+            flex-direction: column;
+        }
 
 /*        .nav-title, .color-scheme-none .nav-title {
             color: white !important;
@@ -443,6 +447,11 @@ to {
         color: #000000;
     }
 
+    .color-scheme-white {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
 /*        .color-scheme-none .nav, .color-scheme-none .nav-title {
             color: #000000;
         }
@@ -450,6 +459,9 @@ to {
         .color-scheme-none .lines {
             background-color: #ffffff;
         }
+.color-scheme-white .lines {
+    background-color: #000000;
+}
 
     .color-scheme-tan .lines {
         background-color: #000000;
@@ -461,7 +473,15 @@ to {
         color: #000000;
         opacity: .8;
     }
-
+.color-scheme-white .nav, .color-scheme-white .nav-title {
+    transition: all .3s ease;
+    color: #000000;
+}
+    .color-scheme-white .nav:hover, .color-scheme-white .nav-title:hover{
+        transition: all .3s ease;
+        color: #000000;
+        opacity: .8;
+    }
     .color-scheme-tan {
         background-color: #E7DED9;
         color: #000000;

@@ -145,6 +145,7 @@ p {
 @media (max-width: 1000px) {
     .hh, .hh-fit, .hh-th, .qh-hh, .fh-hh, .fh, .fh-fit {
         height: fit-content;
+        height: auto;
     }
 }
 
@@ -172,12 +173,18 @@ p {
     max-width: 1300px;
     width: 80%;
     margin: auto;
+    z-index: 6;
 }
 
 .row-half, row-half-f {
     width: 50%;
     padding: 3%;
     margin: auto;
+}
+
+.row-title {
+    width: 100%;
+    padding: 2% 3% 2% 3%;
 }
 
 .row-third, .row-third-f {
@@ -194,7 +201,7 @@ p {
 
 @media (max-width: 1000px) {
 
-    .row-lg, .row-half, .row-third {
+    .row-lg, .row-half, .row-third, .row-twothird {
         width: 100%;
     }
 
@@ -202,7 +209,7 @@ p {
         padding: 4%;
     }
 
-    .row-half, .width-full {
+    .row-half, .width-full, .row-title {
         padding: 4% 2% 4% 2%;
     }
 

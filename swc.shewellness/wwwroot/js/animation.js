@@ -44,68 +44,59 @@ var screenHeight = (window.innerHeight)/3;
         $('html, body').animate({ scrollTop: mainHead - header }, "ease");
     })
 
-
 })();
 
 (function () {
 
-    var mouseGrid = document.querySelectorAll('.invisible-mouse-grid');
-    var text = document.getElementById('overlay-text');
+    var nav = document.querySelector('#navigation-header');
 
-    mouseGrid.forEach(mg => mg.addEventListener('mouseover', () => {
-        let data = mg.getAttribute('data-mouse-location');
-
-
-        switch (data) {
-            case "1":
-                text.style.left = '53%';
-                text.style.top = '46%';
-                break;
-            case "2":
-                text.style.left = '55%';
-                text.style.top = '46%';
-                break;
-            case "3":
-                text.style.left = '57%';
-                text.style.top = '46%';
-                break;
-            case "4":
-                text.style.left = '53%';
-                text.style.top = '48%';
-                break;
-            case "5":
-                text.style.left = '55%';
-                text.style.top = '48%';
-                break;
-            case "6":
-                text.style.left = '57%';
-                text.style.top = '48%';
-                break;
-            case "7":
-                text.style.left = '53%';
-                text.style.top = '50%';
-                break;
-            case "8":
-                text.style.left = '55%';
-                text.style.top = '50%';
-                break;
-            case "9":
-                text.style.left = '57%';
-                text.style.top = '50%';
-                break;
+    function addHeaderColor() {
+        var tmpLoc = window.location.pathname;
+        //if ((tmpLoc == " " || tmpLoc == "/" || tmpLoc == "Home")) {
+        if (window.scrollY > 30) {
+            if ($(nav).hasClass('color-scheme-none')) {
+                nav.classList.add('color-scheme-white');
+                nav.classList.remove('color-scheme-none');
+            }
         }
+        else {
+            if ($(nav).hasClass('color-scheme-white')) {
+                nav.classList.remove('color-scheme-white');
+                nav.classList.add('color-scheme-none');
+            }
+        }
+        //}
+    }
 
-    }))
-
-})();
-
-(function () {
-    //let text = document.getElementById('scroll-text');
-
-    //window.addEventListener('scroll', () => {
-    //    let s = scrollY
-    //    text.style.left = `-${s / 10}%`;
-    //})
+    window.addEventListener('scroll', addHeaderColor);
 
 
 })();
+
+var lines = document.querySelectorAll('.lines');
+var t = document.getElementById("line-1");
+var b = document.getElementById("line-2");
+
+var dropdown = document.getElementById("dropdown-button");
+var menu = document.getElementById('dropdown-mobile');
+var nav = document.getElementById('navigation-header');
+
+
+dropdown.addEventListener('click', () => {
+    if ($(menu).hasClass('collapse')) {
+        menu.classList.remove('collapse');
+        menu.classList.add('fade-in')
+        menu.classList.add('d-flex');
+    }
+    else {
+        menu.classList.add('collapse');
+        menu.classList.remove('d-flex');
+    }
+})
+
+$(document).ready(function () {
+    $(dropdown).click(function () {
+        $(t).toggleClass('rotated');
+        $(b).toggleClass('rotated-inverse');
+    });
+});

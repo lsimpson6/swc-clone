@@ -41,7 +41,64 @@
     line-height: 60px;
 }
 
-@media screen and (max-width: 850px) {
+.controls-container {
+    flex-direction:column;
+}
+
+.control {
+    border: 2px solid black;
+    width: 17px;
+    height: 17px;
+    margin: auto;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.myths {
+    min-height: 400px;
+}
+
+    .control[data-active="true"] {
+        background-color: black;
+    }
+
+    .control[data-active="false"] {
+        background-color: transparent;
+    }
+
+.floating-image {
+    position: absolute;
+    left: 50%;
+    top:0%;
+    transform: translate(10%, 45vh);
+    z-index: 7;
+}
+
+.floating-image img {
+    height: 400px;
+    width: 400px;
+    border-radius: 100%;
+}
+@media screen and (max-width: 1000px) {
+
+    .floating-image {
+        position: relative;
+        left: 00%;
+        top: 0%;
+        transform: translate(0%, 0%);
+        text-align: center;
+    }
+
+    .floating-image img {
+        height: 350px;
+        width: 350px;
+        border-radius: 100%;
+    }
+
+    .controls-container {
+        flex-direction: row;
+        max-width: 100px;
+    }
 
     .line-height-lg h3 {
         line-height: 35px;

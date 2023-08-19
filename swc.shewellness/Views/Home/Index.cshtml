@@ -1,10 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Home";
+    ViewData["Image"] = "https://i.imgur.com/gDGwHcJ.png";
 }
 
 <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
 
-<div class="color-scheme-navy  row-full p-0 fh d-flex align-items-center" data-background=true style=" position: relative; z-index: 1;" id="welcome-image">
+<div class="color-scheme-navy row-full p-0 fh d-flex align-items-center" data-background=true style=" position: relative; z-index: 1;" id="welcome-image">
     <div class="row-lg d-flex align-items-center" style="z-index: 999 !important;">
 
         <div class="row-half nomauto" style="z-index: 999;">
@@ -23,21 +24,13 @@
 
 <div class="row-full color-scheme-navy d-flex align-items-center fh">
     <div class="row-lg d-flex align-items-center">
-        <div class="row-half d-flex flex-column nomauto">
-            <h3 class="text-white-50 animate">Your feminine physiology is uniquely designed.</h3>
-            <h1 class="animate">Your nutrition should be that way too.</h1>
+        <div class="row-twothird d-flex flex-column nomauto">
+            <h4 class="text-white-50 animate">Your feminine physiology is uniquely designed.</h4>
+            <h2 class="animate">Your nutrition should be that way too.</h2>
             <div class="row-full py-5 animate">
                 <a class="cta-button-w my-5 p-3" asp-controller="Contact" asp-action="Index">Get Started</a>
             </div>
         </div>
-    </div>
-</div>
-
-
-
-<div class="row-full color-scheme-none d-flex flex-column align-items-start">
-    <div class="row-lg d-flex flex-wrap m-auto justify-content-bewteen align-items-center" style="position: relative;">
-        <partial name="_OrgansPartial" />
     </div>
 </div>
 
@@ -48,9 +41,15 @@
                 Together, we incorporate an integrative approach to make food enjoyable again, reduce your symptoms and truly feel well. By utilizing real, science-backed nutrition with functional lab testing, we take a deep dive into your health to address underlying causes to make sustainable changes to meet you where you are.
             </p>
         </div>
-@*        <div class="m-auto row-half text-center">
-            <img src="https://i.imgur.com/3w9SEZt.png" width="auto" height="600px" alt="Woman making heart over baby in womb." />
+        @*        <div class="m-auto row-half text-center">
+        <img src="https://i.imgur.com/3w9SEZt.png" width="auto" height="600px" alt="Woman making heart over baby in womb." />
         </div>*@
+    </div>
+</div>
+
+<div class="row-full color-scheme-none d-flex flex-column align-items-start">
+    <div class="row-lg d-flex flex-wrap m-auto justify-content-bewteen align-items-center" style="position: relative;">
+        <partial name="_OrgansPartial" />
     </div>
 </div>
 
@@ -74,11 +73,11 @@
             <h2 class="animate">Hey, I'm Amber</h2>
             <p class="animate">I’m a mama, wife, Registered Nurse and Candidate for a Board-Certified Nutrition Specialist. Through my own health struggles, I have discovered the awe-inspiring power of food and the impact true nourishment can have on your symptoms and diagnosis. Now, I have set out on a mission to empower other women to do the same, be informed of their health and truly feel well. The rumors are false: you can have your health and eat your cookies too.</p>
             <div class="row-full py-5 animate">
-                <a class="cta-button-w my-5 p-3" asp-controller="Contact" asp-action="Index">Contact Me</a>
+                <a class="cta-button-w my-5 p-3" asp-controller="About" asp-action="Index">Learn More</a>
             </div>
         </div>
         <div class="m-auto row-half text-center">
-            <img src="https://i.imgur.com/vzMPPtE.jpg" width="auto"  height="600px" alt="Amber Adkins, Owner and Founder of She Wellness Co." />
+            <img src="https://i.imgur.com/C37UhlH.jpg" width="auto" height="600px" alt="Amber Adkins, Owner and Founder of She Wellness Co." />
         </div>
     </div>
 
