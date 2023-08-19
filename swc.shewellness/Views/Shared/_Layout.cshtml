@@ -34,9 +34,6 @@
         if (title == "Home"){
             color = "none";
         }
-        else {
-            color = "white";
-        }
     }
 
     <header id="navigation-header" class="nav-header py-1 color-scheme-@color" data-text-color="">
@@ -69,10 +66,11 @@
     <footer class="color-scheme-none d-flex flex-row" style="z-index: 999 !important;" id="footer">
         <partial name="_FooterPartial">
     </footer>
-    <script async src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script async src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script async rel="preload" src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script async rel="preload" src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 @*    <script aync src="~/js/NewsletterPreview.js" asp-append-version="true"></script>*@
     <script async src="~/js/animation.js" asp-append-version="true"></script>
+    <script async src="~/js/header.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
