@@ -75,7 +75,6 @@ namespace swc.shewellness.Controllers
         {
             MailMessage mail = new MailMessage();
             mail.To.Add("shewellnessco@gmail.com");
-            //mail.To.Add("simpson.logan19@gmail.com");
             mail.From = new MailAddress(m.Email);
             mail.Subject = $"{m.FirstName}, just sent you a message!";
             //mail.Sender = new MailAddress(m.Email);
@@ -105,8 +104,7 @@ namespace swc.shewellness.Controllers
             SmtpClient sm = new SmtpClient();
             sm.Host = "smtp.gmail.com";
             sm.Port = 587;
-            sm.Credentials = new System.Net.NetworkCredential("shewellnessco@gmail.com", "jrnfedmwdlxzexkm");
-            //smtpConfirmation.Credentials = new System.Net.NetworkCredential("simpson.logan19@gmail.com", "qtjcywpuljqrhycz");
+            sm.Credentials = new System.Net.NetworkCredential("shewellnessco@gmail.com", EMAIL_PASSWORD);
             sm.EnableSsl = true;
             sm.UseDefaultCredentials = false;
             sm.Send(message);
